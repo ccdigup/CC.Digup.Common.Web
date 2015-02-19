@@ -1,0 +1,125 @@
+﻿.crosswordEditorMenuPopup 
+{
+    z-index: 25 !important;
+    /*height: 90% !important;
+    width: 24.5% !important;
+    left: 4% !important;
+    top: 5% !important;*/
+    display: block;
+    height: auto !important;
+    left: 40px !important;
+    top: 5% !important;
+    padding-bottom: 10px;
+    min-height: 697px;
+    max-height: 90%;
+    width: 250px !important;
+    
+}
+.crosswordEditorMenuPopup .ui-dialog-titlebar {
+    display: none !important;
+}
+
+.crosswordEditorViewPopup 
+{
+    z-index: 26 !important;
+    display: block;
+    outline: 0px;
+    height: auto;
+    width: 702px !important;
+    top: 29px;
+    height: auto !important;
+    min-height: 697px;
+    max-height: 697px;
+    /*max-height: 90%;*/
+    left: 310px !important;
+    top: 5% !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    padding-bottom: 10px;
+/*    height: 90% !important;
+    width: 68% !important;
+    left: 30% !important;
+    top: 5% !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;*/
+    
+}
+.crosswordEditorViewPopup .ui-dialog-titlebar {
+    padding: 0em 3em;
+    position: absolute;
+    margin-left: 85%;
+    z-index: 302;
+}
+
+
+
+#crosswordEditorView {
+    padding-bottom: 20px;
+    z-index: 300;
+ }
+ 
+ #crossword_panel {
+
+     z-index: 300 !important;     
+ }
+
+.crossword_hr {
+    margin: 15px 0px 0px 0px !important;
+}
+#crosswordEditor {
+    -webkit-user-select: all;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    width: 475px !important;
+    height: 525px !important;
+    max-width: 475px !important;
+    min-height: 525px !important;
+    padding-top: 15px;
+    overflow: auto;
+   
+}
+
+#crosswordEditorMenu {
+    overflow: hidden;
+    z-index: 200 !important;
+}
+
+#crosswordEditorMenu .crosswordEditor_options h3{
+    margin: 10px 0 0 18px;
+    padding: 2px;
+    font-family: ForwardSans-Regular !important;
+    font-size: 15px;
+}
+#crosswordEditorMenu .crosswordEditor_options h3 a:hover{
+    text-decoration: underline;
+}
+#crosswordEditorMenu .crosswordEditor_options h3 a span{
+    position: absolute;
+    margin-left: -18px;
+}
+#crosswordEditorMenu .crosswordEditor_option_panel{
+    margin: 0 0 0 30px;
+}
+
+#crosswordEditorMenu .crosswordEditor_option_panel button
+{
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+    font-family: ForwardSans-Regular !important;
+    font-size: 15px;
+}
+#crosswordEditorMenu .crosswordEditor_option_panel button:hover{
+    color: #0093d2;
+}
+
+#crosswordEditorMenu .crosswordEditor_option_panel .disabled {
+    cursor: default;
+    color: lightgray;
+} 
+#crosswordEditorMenu .crosswordEditor_option_panel .disabled:hover 
+{
+    color: lightgray;
+}
+

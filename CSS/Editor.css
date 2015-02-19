@@ -1,0 +1,204 @@
+﻿.editorMenuPopup    
+{
+    z-index: 30 !important;
+    height: auto !important;
+    left: 42px !important;
+    top: 5% !important;
+    padding-bottom: 10px;
+    min-height: 697px;
+    max-height: 90%;
+}
+.editorMenuPopup .ui-dialog-titlebar {
+    display: none !important;
+}
+
+.editorViewPopup    
+{
+    z-index: 31 !important;
+    height: auto !important;
+    min-height: 697px;
+    max-height: 90%;
+    left: 307px !important;
+    top: 5% !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    padding-bottom: 10px;
+}
+.editorViewPopup .ui-dialog-titlebar 
+{
+    z-index: 250 !important;
+    padding: 0em 3em;
+    position: absolute;
+    z-index: 1;
+    margin-left: 85%;
+}
+#editorView {
+    z-index: 200 !important;
+}
+
+#editor {
+    -webkit-user-select: all;
+    word-wrap: break-word !important;
+    padding: 15px;
+    width: 650px;
+    border: 1px dotted #0092cf;
+    max-width: 650px;
+    min-height: 50px;
+}
+#editor p{
+    width: auto !important;
+}
+
+#editorMenu .editor_options h3{
+    margin: 10px 0 0 18px;
+    padding: 2px;
+    font-family: ForwardSans-Regular !important;
+    font-size: 15px;
+}
+#editorMenu .editor_options h3 a:hover{
+    text-decoration: underline;
+}
+#editorMenu .editor_options h3 a span{
+    position: absolute;
+    margin-left: -18px;
+}
+#editorMenu .editor_option_panel{
+    margin: 0 0 0 30px;
+}
+#editorMenu .editor_option_panel button, 
+#editorMenu .editor_option_panel #editor_color_btns,
+#editorMenu .editor_option_panel #editor_font_size_btns{
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+    font-family: ForwardSans-Regular !important;
+    font-size: 15px;
+}
+#editorMenu .editor_option_panel button:hover{
+    color: #0093d2;
+}
+
+
+#editorMenu #editor_save_changes,
+#editorMenu #editor_cutText_btn,
+#editorMenu #editor_fontFamily_ForwardSans_btn,
+#editorMenu #editor_italic_btn,
+#editorMenu #editor_replaceWithUnderscore_btn {
+    margin-top: 0;
+}
+#editorMenu #editor_save_changes_inactive,
+#editorMenu #editor_saveas_inactive {
+    text-decoration: none;
+    cursor: default;
+    color: #ccc;
+}
+
+#editorMenu #editor_fontFamily_ForwardSans_btn{
+    font-family: Verdana;
+}
+#editorMenu #editor_fontFamily_LiberationSerif_btn{
+    font-family: Arial;
+}
+
+#editorMenu #editor_italic_btn{
+    font-style: italic;
+}
+#editorMenu #editor_bold_btn{
+    font-weight: 600;
+}
+#editorMenu #editor_underline_btn{
+    text-decoration: underline;
+}
+
+#editor_color_btns button{
+    width: 18px;
+    border-radius: 9px;
+    margin-left: 6px;
+    height: 18px;
+    position: relative;
+    top: 1px;
+    border: 2px solid #fff !important;
+}
+#editor_color_btns button:hover {
+    border: 2px solid #0093d2 !important;
+}
+#editor_color_btns #editor_color_black_btn{
+    background: #000;
+}
+#editor_color_btns #editor_color_red_btn{
+    background: #e60000;
+}
+#editor_color_btns #editor_color_green_btn{
+    background: #00c600;
+}
+#editor_color_btns #editor_color_blue_btn{
+    background: #0092cf;
+}
+#editor_color_btns #editor_color_yellow_btn{
+    background: #efe600;
+}
+#editor_color_btns #editor_color_orange_btn{
+    background: #f98b00;
+}
+
+
+#editor_font_size_btns button{
+    width: 14px;
+    border-radius: 12px;
+    margin-left: 9px;
+    height: 14px;
+    position: relative;
+    top: 1px;
+    border: 2px solid #000 !important;
+}
+#editor_font_size_btns #editor_p_btn {
+    border: 4px solid #000 !important;
+}
+#editor_font_size_btns #editor_h2_btn {
+    
+}
+#editor_font_size_btns #editor_h1_btn {
+    border: 1px solid #000 !important;
+}
+#editor_font_size_btns #editor_h2_btn:hover,
+#editor_font_size_btns #editor_h1_btn:hover,
+#editor_font_size_btns #editor_p_btn:hover {
+    border-color: #0093d2 !important;
+}
+
+#restore_original_text_container {
+    position: fixed;
+    top: 83%;
+    width: 679px;
+    display: none;
+}
+#restore_original_text_container hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+#restore_original_text_container p {
+    padding: 3px 10px;
+    font-size: 14px;
+    line-height: 18px;
+}
+#restore_original_text_btn {
+    margin-left: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#restore_original_text_btn:hover {
+    text-decoration: underline;
+}
+#restore_original_text_btn .textIcon {
+    background-color: #78694c;
+}
+#restore_original_text_btn:hover .textIcon {
+    background-color: #0093d2;
+}
+
+#timeTable_panel .educational_reference_table {
+    max-width: 639px;
+    word-wrap: break-word !important;
+}

@@ -1,0 +1,19 @@
+﻿body {
+    height: auto!important;
+    font-family: Arial !important;
+}
+
+#print-content-view-btn,
+#close-content-view-btn{
+    display: none !important; 
+}
+
+#workSheetEditor_printLayout {
+    left: -50px !important;
+    zoom: 150% !important;
+}
+
+#edit-text-print-container {
+    padding: 20px !important;
+    font-size: 14px !important;
+}

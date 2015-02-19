@@ -1,0 +1,287 @@
+/* Fonts
+------------------------------------------------ */
+
+@font-face {
+    font-family: ForwardSans-Regular;
+    src: url("../fonts/ForwardSans-Regular.otf");
+    font-weight: normal;
+    font-style:  normal;
+}
+
+@font-face {
+    font-family: ForwardSans-Italic;
+    src: url("../fonts/ForwardSans-Italic.otf");
+    font-weight: normal;
+    font-style:  italic;
+}
+
+@font-face {
+    font-family: ForwardSans-Bold;
+    src: url("../fonts/ForwardSans-Bold.otf");
+    font-weight: bold;
+    font-style:  normal;
+}
+
+@font-face {
+    font-family: ForwardSans-BoldItalic;
+    src: url("../fonts/ForwardSans-BoldItalic.otf");
+    font-weight: bold;
+    font-style:  italic;
+}
+
+/* Drag Box
+------------------------------------------------ */
+
+.drag-box { position: absolute !important /*fix*/; top: 50px; left: 50px; width: 200px; height: 200px; border: 1px solid #000; background: #FFF; }
+.drag-box .ui-resizable-handle { display: none !important; }
+.drag-box.shape-selected  .ui-resizable-handle,
+.drag-box.ui-selecting  .ui-resizable-handle,
+.drag-box:active  .ui-resizable-handle { display: block !important; }
+.drag-box__content { position: relative; width: 100%; height: 100%; }
+.drag-box_composition { z-index: 1001 !important; }
+.drag-box_composition:active { outline: 0 none; }
+.drag-box_composition:active  .ui-resizable-handle { visibility: hidden; }
+.drag-box_composition .drag-box-composition:before { display: none; }
+
+.drag-box-composition .ui-resizable-handle,
+.drag-box-composition .ui-resizable-handle,
+.drag-box-composition .ui-resizable-handle { background: transparent; }
+
+/* Drag Box Img
+------------------------------------------------ */
+
+.drag-box-img { position: absolute !important /*fix*/; top: 50px; left: 50px; width: 200px; height: 200px; border: 0 none; /*background: #FFF;*/ }
+.drag-box-img .ui-resizable-handle { display: none !important; }
+.drag-box-img.shape-selected  .ui-resizable-handle,
+.drag-box-img.ui-selecting  .ui-resizable-handle,
+.drag-box-img:active  .ui-resizable-handle { display: block !important; }
+.drag-box-img__img { position: relative; width: 100%; height: 100%; }
+#exerciseView .drag-box-img img { width: 100%; height: 100%; }
+
+/* Drag Box Audio
+------------------------------------------------ */
+
+.drag-box-audio { position: absolute !important /*fix*/; top: 0; left: 0; width: 38px !important; height: 38px !important; }
+.drag-box-audio .ui-resizable-handle { display: none !important; }
+.drag-box-audio__ico { position: relative; width: 100%; height: 100%; background: #FFF; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background: url('../img/audio-ico.png') 0 0 no-repeat; }
+.drag-box-audio.shape-selected .drag-box-audio__ico,
+.drag-box-audio:active .drag-box-audio__ico { display: block; content: ' '; position: absolute; top: -3px; left: -3px; width: 100%; height: 100%; border: 3px solid #ebab28; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background-position: 0 -38px; }
+
+/* Drag Box Video
+------------------------------------------------ */
+
+.drag-box-video { position: absolute !important /*fix*/; }
+.drag-box-video video { width: inherit; height: inherit; }
+.drag-box-video__ico { position: relative; width: 100%; height: 100%; background: #FFF; }
+.drag-box-video__ico:before { display: block; content: ' '; position: absolute; top: 50%; left: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; background: url('../themes/images/ui-icons_888888_256x240.png') -224px -128px no-repeat; }
+
+/* Drag Box Text
+------------------------------------------------ */
+
+.drag-box-text { position: absolute !important /*fix*/; top: 50px; left: 50px; width: 200px; height: 200px; }
+.playground__elements .drag-box-text { border: 1px solid #ddd; }
+.drag-box-text .ui-resizable-handle { display: none !important; }
+.drag-box-text.shape-selected  .ui-resizable-handle,
+.drag-box-text.ui-selecting  .ui-resizable-handle,
+.drag-box:active  .ui-resizable-handle { display: block !important; }
+.drag-box-text__textarea { position: absolute; top: 0; left: 0; width: 100%; height: 100%; /*color: #057ab5; font-size: 17px; font-weight: bold;*/ cursor: default; outline: none; }
+.drag-box-text__textarea:focus { cursor: text; }
+
+/* Drag Box RichText
+----------------------------------------------- */
+
+.drag-box-richtext { position: absolute !important /*fix*/; }
+.playground__elements .drag-box-richtext { border: 1px solid #ddd; }
+.drag-box-richtext .ui-resizable-handle { display: none !important; }
+.drag-box-richtext.shape-selected .ui-resizable-handle,
+.drag-box-richtext.ui-selecting .ui-resizable-handle,
+.drag-box-richtext:active .ui-resizable-handle { display: block !important; }
+.drag-box-richtext__textarea { width: 100%; height: 100%; color: black; cursor: default; outline: none; overflow: hidden; padding: 1px; }
+
+.drag-box-richtext__textarea .text_gap { background: white; height: 20px; display: inline-block; }
+.drag-box-table .answerBox > input[type="text"],
+.drag-box-richtext__textarea .answerBox > input[type="text"] { width: inherit; height: inherit; font-family: ForwardSans-Regular !important; font-size: 14px; padding-left: 0; padding-right: 0; text-align: inherit; }
+.drag-box-table .answerBox > input[type="text"].correct,
+.drag-box-richtext__textarea .answerBox > input[type="text"].correct { border: 1px solid #00cc00 !important; }
+
+.drag-box-richtext__textarea span.answerBox { display: inline-block; }
+.drag-box-richtext__textarea * { -ms-word-wrap: break-word; word-wrap: break-word; }
+
+.dialog { padding-left: 15px; }
+.dialog.circle:before { content: '\25CF'; position: absolute; left: 0; font-family: ForwardSans-Regular, Tahoma, sans-serif; font-size: 14px; }
+.dialog.diamond:before { content: '\220E'; position: absolute; left: 0; font-family: ForwardSans-Regular, Tahoma, sans-serif; font-size: 14px; }
+.dialog.triangle:before { content: '\25BA'; position: absolute; left: 0; font-family: ForwardSans-Regular, Tahoma, sans-serif; font-size: 14px; }
+
+.drag-box-droplet, .drag-box-pdroplet { position: absolute !important /*fix*/; height: auto !important; background: #ecf3f8; outline: solid 1px #0574b0; color: #231f20; font-family: ForwardSans-Regular, Tahoma, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; cursor: default; }
+
+/* fix paragraph height */
+.drag-box-richtext__textarea p,
+.drag-box-table p { min-height: 1.2857em; line-height: 1.286em; margin-bottom: 4px; margin-top: 2px; }
+
+.drag-box-richtext__textarea div,
+.drag-box-table div { min-height: 1.2857em; line-height: 1.286em;}
+
+/* Input field */
+
+.drag-box-inputfield { position: absolute !important /*fix*/; }
+.drag-box-inputfield input, .drag-box-inputfield div.ng-scope { width: inherit; height: inherit; }
+
+.drag-box-inputfield .answerBox { border: 0 none; }
+.drag-box-inputfield .answerBox input { padding: 2px !important; text-align: inherit; }
+
+/* RadioButton and CheckBox */
+
+.drag-box-button { position: absolute !important /*fix*/; }
+.drag-box-button > div { width: inherit; height: inherit; position: relative; overflow: hidden; }
+.drag-box-button .overlay, .drag-box-inputfield .overlay { position: absolute; z-index: 2; width: 100%; height: 100%; top: 0; left: 0; }
+.drag-box-button .answerBox { border: 0 none; }
+
+/* Table */
+
+.drag-box-table { position: absolute !important /*fix*/; }
+.drag-box-table .ui-resizable-handle { display: none !important; }
+.drag-box-table.shape-selected .ui-resizable-handle,
+.drag-box-table.ui-selecting .ui-resizable-handle,
+.drag-box-table:active .ui-resizable-handle { display: block !important; }
+.drag-box-table.answerBox { border: 0 none; }
+.drag-box-table > div > div { border-top: 2px solid #ece8dc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.drag-box-table div.cell { height: 100%; float: left; background: #fffcef; overflow: hidden; }
+.drag-box-table div.cell p { line-height: 18px; display: inline-block; vertical-align: middle; }
+.drag-box-table div[contenteditable='true'] { -ms-word-wrap: initial; word-wrap: initial; }
+.drag-box-table div.head div.cell { background: #ece8dc; text-align: center; font-weight: bold; }
+
+/* ---------- exercise title ---------- */
+
+/* ---- useage:default name:"Ü1" ---- */
+.headline-default { color: #005da8; font-size: 16px; font-weight: 600; margin: 10px 0 0 10px; text-align: left; text-decoration: none; display: block; }
+
+/* ----------/exercise title ---------- */
+
+
+
+/* ---------- box ---------- */
+
+/* ---- usage:default name:"Standard" ---- */
+.box-default { background-color: #fff; border: 1px solid #000; }
+
+/* ---- name:"Fläche Sand" ---- */
+.box-sand_hell { background-color: #f6eedf; border: 0px solid #000; }
+
+/* ---- name:"Fläche Sand dunkler" ---- */
+.box-sand_dunkler { background-color: #e4dcc9; border: 0px solid #000; }
+
+/* ----------/box ---------- */
+
+
+
+/* ---------- textbox ---------- */
+
+/* ---- usage:default name:"Standard" ---- */
+.text-default .drag-box-text__textarea { font-family: ForwardSans-Regular; text-align: left; }
+
+/* ---- name:"Ü1" ---- */
+.text-u1 .drag-box-text__textarea { color: #005da8; font-family: ForwardSans-Bold; }
+
+/* ---- name:"Nummer groß" ---- */
+.text-number_big { display: table; color: #C4DEE4; font-family: ForwardSans-Regular; font-weight: bold; font-size: 50px; vertical-align: middle; text-align: center; }
+.text-number_big .drag-box-text__textarea { position: relative; display: table-cell; color: #C4DEE4; font-family: ForwardSans-Regular; font-weight: bold; font-size: 50px; vertical-align: middle; text-align: center; line-height: 50px; }
+
+/* Fix */
+.form__label .text-number_big { display: inline-block; }
+
+/* ----------/textbox ---------- */
+
+
+
+/* ---------- paragraph ---------- */
+
+/* ---- usage:default name:"ohne" ---- */
+.paragraph-default { }
+
+/* ---- name:"Klein" ---- */
+.paragraph-small { font-family: ForwardSans-Regular; text-align: left; font-size: 12px; line-height: 13px; }
+
+/* ---- name:"Center" ---- */
+.paragraph-center { text-align: center; }
+
+/* ---- name:"Right" ---- */
+.paragraph-right { text-align: right; }
+
+/* ---- name:"Kopfzeile" ---- */
+h1 { font-size: 14px; padding: 7px 0; margin: 0; text-align: center; font-weight: bold; background: #ece8dc; }
+
+/* ----------/paragraph ---------- */
+
+
+
+/* ---------- letter ---------- */
+
+/* ---- usage:default name:"ohne" ---- */
+.letter-default { }
+
+/* ---- name:"Blau" ---- */
+.letter-blau { color: #005da8; }
+
+.letter-u1 { color: #005da8; font-family: ForwardSans-Bold; }
+
+/* ----------/letter ---------- */
+
+/* fix absolute positioning in preview */
+.answerBox > .optionBox {
+    z-index: 1000 !important;
+    position: static !important;
+}
+.optionBox.ui-draggable-dragging {
+    position: absolute!important;
+    opacity: 0.6;
+}
+/* end: fix absolute positioning in preview */
+
+
+.exercise_audio audio.show { 
+    display: none;
+}
+
+.input-dark input {
+    border: 1px solid #000;
+    background: #CCC;
+    color: #333;
+}
+
+.text_gap_s1 {
+    background: #ecf3f8 !important;
+}
+
+.text_gap_s2 {
+    background: #f6eedf !important;
+}
+
+/* #region Sortable Words */
+
+.sortable_word, .sortable_char {
+    height: inherit !important;
+    background: #ECF3F8;
+    outline: solid 1px #0574B0;
+    padding: 0 5px;
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.sortable_list2 .sortable_word:first-child,
+.sortable_list2 .sortable_char:first-child {
+    margin-left: 0;
+}
+
+.sortable_list2 {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.sortable_chars {
+    font-size: 24px;
+}
+
+/* #endregion Sortable Words */

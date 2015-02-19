@@ -1,0 +1,126 @@
+﻿@media all and (min-width: 1280px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 425px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 150px !important;
+    }
+    #page, #page2 {
+        margin-left: 232px;
+    }
+}
+@media all and (min-width: 1366px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 483px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 198px !important;
+    }
+    #page, #page2 {
+        margin-left: 275px;
+    }
+}
+@media all and (min-width: 1400px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 500px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 215px !important;
+    }
+    #page, #page2 {
+        margin-left: 292px;
+    }
+}
+@media all and (min-width: 1440px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 510px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 235px !important;
+    }
+    #page, #page2 {
+        margin-left: 312px;
+    }
+}
+@media all and (min-width: 1600px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 585px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 310px !important;
+    }
+    #page, #page2 {
+        margin-left: 392px;
+    }
+}
+@media all and (min-width: 1680px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 625px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 350px !important;
+    }
+    #page, #page2 {
+        margin-left: 432px;
+    }
+}
+@media all and (min-width: 1915px) {
+    .exercisePopup,
+    .editorViewPopup,
+    .workSheetEditorViewPopup,
+    .crosswordEditorViewPopup {
+        left: 735px !important;
+    }
+    .exercisePopupMenu, 
+    .exercisePopupMaximized,
+    .editorMenuPopup,
+    .workSheetEditorMenuPopup,
+    .crosswordEditorMenuPopup {
+        left: 460px !important;
+    }
+    #page, #page2 {
+        margin-left: 552px;
+    }
+}

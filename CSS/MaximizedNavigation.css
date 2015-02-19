@@ -1,0 +1,118 @@
+﻿.menu_border {
+    width: 60px;
+    height: 155px;
+    z-index: 60;
+    /*background-color: #0093D2;*/
+    position: fixed;
+    -webkit-user-select: none !important;
+}
+.menu_border_right {
+    right: 0;
+    background: url("images/maximized_menu_border_right.png") repeat-y transparent;
+}
+.menu_border_left 
+{
+    background: url("images/maximized_menu_border_left.png") repeat-y transparent;
+    left: 0;
+}
+
+.btnContainer_max {
+    top: 108px !important;
+    position: relative;
+    background-color: #fff;
+}
+
+#maximized_navigation {
+    background: #0093d2;
+    width: 100%;
+    height: 155px;
+    top: 0;
+    position: fixed;
+    z-index: 60;
+    display: none;
+    overflow-x: visible;
+}  
+
+#maximized_menu_content {
+    width: auto;
+    height: 90%;
+    background-color: transparent;
+    overflow-x: visible;
+    position: absolute;
+    left: 0px;
+    margin-left: 70px;
+
+}
+#maximized_menu_content .activeLesson {
+    width: 400px; /*has to be dynamic!*/
+    height: auto;
+    margin: 0 10px;
+    background: transparent;
+}
+    #maximized_menu_content .activeLessonContent {
+        margin: 32px 0 0 5px;
+    }
+        #maximized_menu_content .activeLessonContent img{
+            width: 80px;
+            cursor: pointer;
+        }
+        #maximized_menu_content .activeLessonContent img.selectedImage{
+            width: 78px;
+            border: 2px solid #FF0000;
+        }
+            #maximized_menu_content .activeLessonContent img.sm{
+                margin-right: 5px;
+            }
+            #maximized_menu_content .activeLessonContent img.doublePage{
+                margin-left: -3px;
+            }
+    #maximized_menu_content .activeLessonBar {
+        width: 37px;
+        height: 108px;
+        float: left;
+        background-color: #FFFFFF;
+        margin: -32px 15px 0 0;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    #maximized_menu_content .activeLessonBar p
+    {
+        font-size: 27px;
+        font-weight: 600;
+        width: 36px;
+        top: 70px;
+        position: relative;
+        color: #0093D2;
+        text-align: center;
+    }
+    
+    #maximized_menu_content .inactiveLessonBar {
+        width: 37px;
+        height: 55px;
+        margin: 0 15px;
+        background-color: #FFFFFF;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        cursor: pointer;
+    }
+    #maximized_menu_content .inactiveLessonBar p
+    {
+        font-size: 27px;
+        font-weight: 600;
+        top: 20px;
+        position: relative;
+        color: #0093D2;
+        text-align: center;
+        width: 36px;
+    }
+    #maximized_menu_content .activeLessonNumber p{
+        background-color: #FF0000;
+        color: white !important;
+    }
+    #maximized_menu_content .activeLessonNumber {
+        background-color: #FF0000;
+    }
+    
+   

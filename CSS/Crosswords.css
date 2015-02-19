@@ -1,0 +1,289 @@
+﻿#create_own_crossword_btn:hover, 
+#configure_crossword_btn:hover,
+#end_configure_crossword_btn:hover,
+#show_selected_crossword_material:hover,
+#show_crossword_headline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#create_own_crossword_btn:hover .textIcon a {
+    color: #78694c;
+}
+#configure_crossword_btn:hover .textIcon,
+#end_configure_crossword_btn:hover .textIcon,
+#show_selected_crossword_material:hover .textIcon{
+    background-color: #78694c;
+}
+
+#create_own_crossword_btn_icon {
+    margin-left: 14.5px;
+}
+
+#create_own_crossword_btn_icon {
+    background-color: transparent !important;
+}
+#create_own_crossword_btn_icon a {
+    color: #0093d2;
+    font-size: 26px;
+}
+#create_own_crossword_btn_icon a:hover {
+    color: #78694c;
+}
+
+#configure_crossword_btn_icon {
+    margin-left: 114px;
+}
+
+/*#crossword_panel {
+    margin-top: -25px;
+}*/
+   
+#crossword_panel .loadmask,
+#crossword_content_bag .loadmask{
+        background-color: #fff;
+        opacity: 0.7;
+}
+   
+#ownCrosswords .ownCrossword {
+    background: #e0f4fa;
+    width: 233px;
+    margin: 12px 46px 12px 0;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    padding: 7px 20px;
+    text-align: left;
+    float: left;
+}
+#ownCrosswords .ownCrossword a{
+    font-size: 16px;
+}
+#ownCrosswords .ownCrossword:hover{
+    outline: 1px solid #0093d2;
+    cursor: pointer;
+}
+#ownCrosswords .ownCrossword:hover a{
+    color: #0093d2;
+    /*text-decoration: underline;*/
+    /*font-weight: 600;*/
+}
+ 
+ 
+ 
+/*ICONS*/
+#crossword_content .crossword_icon {
+    display: none;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+}
+#crossword_content .crossword_minus_icon {
+    background: url(images/timeTable_minus_icon.png) no-repeat transparent;
+    margin-left: -17px;
+}
+#crossword_content .crossword_plus_icon {
+    background: url(images/timeTable_plus_icon.png) no-repeat transparent;
+    margin-left: 39px;
+}
+#crossword_content .crossword_minus_icon:hover{
+    background: url(images/timeTable_minus_icon_hover.png) no-repeat transparent;
+}
+#crossword_content .crossword_plus_icon:hover {
+    background: url(images/timeTable_plus_icon_hover.png) no-repeat transparent;
+}
+
+#crossword_content .educational_reference_table tr.educational_reference_innerContent:hover td {
+    background: url(images/timeTable_edit_icon.png) top right no-repeat #e5f2f8;
+}
+
+#crossword_content .educational_reference_innerContent:hover .crossword_icon{
+    display: inherit;
+}
+ 
+
+#ownCrosswords_desc {
+    margin-bottom: 5px;
+}
+
+#ownCrosswords .ownCrossword .crossword_edit_icon 
+{
+    background: url(images/timeTable_edit_icon_blue.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px 200px;
+    cursor: pointer;
+}
+#ownCrosswords .ownCrossword .crossword_edit_icon:hover
+{
+    background: url(images/timeTable_edit_icon.png) -3px -3px no-repeat transparent;
+}
+
+#ownCrosswords .ownCrossword .crossword_plus_icon 
+{
+    background: url(images/timeTable_plus_icon_blue.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px 241px;
+    cursor: pointer;
+}
+#ownCrosswords .ownCrossword .crossword_plus_icon:hover
+{
+    background: url(images/timeTable_plus_icon.png) no-repeat transparent;
+}
+
+#ownCrosswords .ownCrossword .crossword_delete_icon 
+{
+    background: url(images/timeTable_delete_icon.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px -31px;
+    cursor: pointer;
+}
+#ownCrosswords .ownCrossword .crossword_delete_icon:hover
+{
+    background: url(images/timeTable_minus_icon.png) no-repeat transparent;
+}
+
+#selectCrosswordVocabularyLesson {
+    width: 90%;
+}
+
+.crosswordEditor_options {
+    margin: 5px;
+}
+
+.crosswordVocabularyTable td {
+    border-bottom: 1px solid gainsboro;
+}
+
+.crosswordVocabularyTable table tr.selected{
+    background-color: #e5f4fb;
+}
+
+.crosswordVocabularyTable {
+    height: 175px;
+    overflow: auto;
+    border: 1px solid gainsboro;
+}
+
+.crosswordVocabularyTable table {
+    width: 100%;
+}
+
+#btnCrossVocabulary_Add:hover {
+    color: gray;
+}
+
+#selectCrosswordVocabularyLesson {
+    width: 100%;
+}
+
+#inputOwnCrosswordVocabulary {
+    display: block;
+    width: 98%;
+}
+
+#btnCrosswordVocabulary_Add:hover .textIcon, #btnCrosswordVocabulary_Create:hover .textIcon {
+    background-color: #78694c;
+}
+
+#btnCrosswordVocabulary_Add:hover .textIcon a, #btnCrosswordVocabulary_Create:hover .textIcon a
+{
+    color: #fff;
+}
+
+#crosswordEditorMenu hr {
+    border: 1px solid gainsboro;
+}
+
+.crosswordIcon {
+    font-size: 24px;
+    font-weight: bold;
+    color: sienna !important;
+    margin-right: 5px;
+}
+
+#btnCrosswordVocabulary_Remove, #btnCrosswordVocabulary_RemoveAll {
+    display: inline;
+    cursor: pointer;
+}
+
+#btnCrosswordVocabulary_Create, #btnCrosswordVocabulary_Add {
+    cursor: pointer;
+}
+
+#lblCrosswordShowContent {
+    display: inline; margin-left: 10px
+}
+
+#btnCrossword_ShowContent {
+    padding-top: 10px;
+    width: 475px !important;
+    height: 200px;
+    border-right: 1px solid #aaaaaa;
+}
+
+.crosswordTable {
+    width: 465px;
+    height: 465px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    
+}
+.crosswordTable td {
+    border: 1px solid #aaaaaa;
+    width: 15px !important;
+    height: 15px !important;
+    text-align: center;
+}
+
+.crosswordTable td.filled {
+    border: 2px solid #666;
+}
+
+.crosswordRowIndex {
+    border: none !important;
+}
+
+.crosswordHints {
+    float: right;
+    width: 175px;
+    max-width: 175px;
+    margin-top: 20px;
+    max-height: 585px;
+    height: 585px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.crosswordHintsHeaderHorizontal {
+    margin-top: 15px;
+}
+ 
+.crosswordHintsHeader 
+{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.crosswordHintText {
+    width: 170px;
+    max-width: 170px;
+    min-height: 20px;
+    max-height: 200px;
+    -webkit-user-select: all;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word !important;
+}
+
+.crosswordHintText:focus {
+    background-color: #e0f4fa;
+}
+
+.crosswordHintText[contenteditable="true"]:active,
+.crosswordHintText[contenteditable="true"]:focus{
+    border:none;
+    outline:none;
+     
+}

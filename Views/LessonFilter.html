@@ -1,0 +1,30 @@
+﻿<div id="timeTable_panel">
+    <div id="timeTable_content">
+        <table>
+            <tr>
+                <td><input type="radio" name="timeTable_radio_filter" class="timeTable_radio_filter" value="all" id="timeTable_radio_filter_off" checked="checked"/></td>
+                <td>alle Lektionen</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="timeTable_radio_filter" class="timeTable_radio_filter" value="filtered" id="timeTable_radio_filter_on" /></td>
+                <td>einschränken auf Lektion:</td>
+                <td><select  id="timeTable_select_firstlesson"></select></td>
+                <td>Übung:</td>
+                <td><select  id="timeTable_select_firstexercise"></select></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="timeTable_until_text"><input type="checkbox" id="timeTable_select_until" /> bis Lektion:</td>
+                <td><select  id="timeTable_select_lastlesson"></select></td>
+                <td>Übung:</td>
+                <td><select  id="timeTable_select_lastexercise"></select></td>
+                <td>Anzeigen <a id="show_selected_timeTable_material">check</a></td>
+            </tr>
+        </table>
+    </div>
+</div>

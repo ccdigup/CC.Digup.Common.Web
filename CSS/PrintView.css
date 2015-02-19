@@ -1,0 +1,207 @@
+﻿.hide-by-printing-content {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+#printview {
+    background-color: #fff;
+}
+
+body {
+    overflow-y: auto;
+}
+
+#print-content-view-btn,
+#close-content-view-btn {
+    font-size: 18px;
+    background-color: #cbc4b9;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 8px;
+    border: 8px solid #fff;
+    z-index: 1000;
+}
+
+#print-content-view-btn {
+    right: 130px;
+}
+
+#print-content-view-btn:hover,
+#close-content-view-btn:hover {
+    background-color: #78694c;
+}
+
+ #timeTable_panel .educational_reference_table{
+    max-width: 100% !important;
+}
+
+
+/* EducationReferences- PrintFormats */
+
+#printview .educational_reference_table tr.educational_reference_innerContent.selected_row .educational_reference_activity_innerColumn,
+#printview .educational_reference_table tr.educational_reference_innerContent:hover .educational_reference_activity_innerColumn {
+    background-image: none !important;
+}
+
+#printview .educational_reference_table tr.educational_reference_innerContent:hover td {
+    background-color: #fff !important;
+}
+#printview .educational_reference_table tr.educational_reference_innerContent td:hover {
+    cursor: default !important;
+}
+
+#printview #restore_timeTableData #restore_timeTableData_btn.active:hover,
+#printview #restore_timeTableData #restore_timeTableData_btn.inactive,
+#printview #restore_timeTableData #restore_timeTableData_btn.active,
+#printview #timeTable_content .timeTable_minus_icon:hover,
+#printview #timeTable_content .timeTable_plus_icon:hover,
+#printview #timeTable_content .timeTable_minus_icon,
+#printview #timeTable_content .timeTable_plus_icon {
+    background: none no-repeat center !important;
+    cursor: default !important;
+}
+
+#printview #timeTable_content .educational_reference_table tr.educational_reference_innerContent:hover td {
+    background: none top right no-repeat transparent!important;
+    cursor: default !important;
+}
+
+#printview .educational_reference_form_column, 
+#printview .educational_reference_activity_column, 
+#printview .educational_reference_material_column, 
+#printview .educational_reference_time_column {
+    padding-bottom: 2px;
+}
+
+/* EditorPrintView */
+
+#edit-text-print-container {
+    padding: 20px;
+    font-size: 14px;
+    padding-top: 55px;
+}
+
+
+/* WorkSheetEditor */
+
+#printview #workSheetEditor_printLayout{
+    position: relative; 
+    top: -130px; 
+    zoom: 195%;
+}
+
+#printview #workSheetEditor_printLayout .crosswordHints {
+    width: 350px;
+    max-width: none;
+    margin-top: auto;
+    height: auto;
+    overflow: visible;
+    position: absolute !important;
+    cursor: default;
+}
+
+#printview #workSheetEditor_printLayout .crosswordHints #crosswordHintsBoxVertical{
+    float: left;
+} 
+
+#printview #workSheetEditor_printLayout .crosswordHints #crosswordHintsBoxHorizontal {
+    float: right; 
+}
+#printview #workSheetEditor_printLayout .crosswordHints #crosswordHintsBoxHorizontal .crosswordHintsHeaderHorizontal{
+    margin-top: 0px;
+}
+
+#printview #workSheetEditor_printLayout .crosswordTable 
+{
+    cursor: default;   
+    position: absolute !important;
+}
+
+#printview #workSheetEditor_printLayout .workSheetTextField,
+#printview #workSheetEditor_printLayout .draggableContainer {
+    cursor: default;
+}
+
+#printview #workSheetEditor_printLayout .workSheetTextField_editor   {
+    word-wrap: break-word !important;
+
+}
+
+#printview #workSheetEditor_printLayout .workSheetTextField_editor div  {
+    word-wrap: break-word !important;
+
+}
+
+.workSheetTextField 
+{
+    min-width: 150px;
+    min-height: 50px;
+    height: auto !important;
+    width: auto;
+    /*border: dotted gray thin;*/
+    outline: 1.5px solid #0093d2;
+    position: absolute !important;
+    /*margin: 30px 30px 25px 30px;*/
+    max-width: 420px;
+    cursor: move;
+}
+
+
+#printview #workSheetEditor_printLayout .crosswordTable td {
+    border: 1px solid #aaaaaa;
+    width: 15px !important;
+    height: 15px !important;
+    text-align: center;
+}
+
+#printview #workSheetEditor_printLayout .crosswordTable td.filled {
+    border: 2px solid #666;
+}
+
+#printview #workSheetEditor_printLayout .crosswordRowIndex {
+    border: none !important;
+}
+
+#printview #workSheetEditor_printLayout .workSheetTextField {
+    border: none !important;
+    outline: none !important;
+}
+
+
+/* CrossWordTable */
+#crosswordTable_print_container {
+    padding: 20px;
+    padding-top: 45px;
+}
+
+#crosswordTable_print_container #crosswordHintsBoxVertical,
+#crosswordTable_print_container #crosswordHintsBoxHorizontal {
+    padding: 10px 17px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#crosswordTable_print_container #crosswordHintsBoxHorizontal .crosswordHintsHeaderHorizontal {
+    margin-top: 0;
+}
+
+#crosswordTable_print_container .crosswordTable td {
+    border: 1px solid #aaaaaa;
+    width: 15px !important;
+    height: 15px !important;
+    text-align: center;
+}
+
+#crosswordTable_print_container .crosswordTable td.filled {
+    border: 2px solid #666;
+}
+
+#crosswordTable_print_container .crosswordRowIndex {
+    border: none !important;
+}

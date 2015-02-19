@@ -1,0 +1,329 @@
+﻿
+.sideBar {
+    width: 32px;
+    position: fixed;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 55%;
+    padding: 1px;
+    /*cursor: move;*/
+    background-color: white;
+    z-index: 20;
+}
+        
+    .sideBar ul li
+    {
+        margin-bottom: 0px;
+        display: block;
+       
+    }
+        .sideBar ul.first_menu {
+             margin-top: 2px;
+        }
+         
+        .sideBar ul.first_menu li a.tools_menu_button
+        {
+            width: auto;
+            height: 26px;
+            display: block;
+            cursor: hand;
+            
+        }
+                
+            .sideBar ul.second_menu
+            {
+                position: absolute;
+                left: 65px;
+                top: 0px;
+                margin-top: -10px;
+                z-index: 20;
+                display: none;
+                
+                
+            }
+            
+            .sideBar ul.second_menu li
+            {
+                display: inline;
+            }
+            
+            .sideBar ul.second_menu a
+            {
+                display: block;
+                margin: 5px;
+                
+            }
+                    
+            .sideBar ul.second_menu:hover
+            {
+                display: block;    
+            }
+                
+                .sideBar ul.second_menu li .tools_extended
+                {
+                    width: 250px;
+                    height: 265px;
+                    background-color: #f9f5ec;
+                    display: block;
+                    cursor: hand;
+                }
+         
+
+.btnToolContainer {
+    display: inline-block; 
+    background-color: #74694F; 
+    border-radius: 50px; 
+    height: 25px; 
+    width: 25px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+
+.btnToolContainer.disabled {
+    background-color: #C8C3B9;
+    
+}
+
+.btnToolContainer.disabled a {
+    color: white;
+}
+
+.btnToolContainer.disabled:hover {
+    background-color: #C8C3B9;
+    cursor: not-allowed;
+}
+
+.btnToolContainer.disabled a:hover {
+    cursor: not-allowed;
+}
+
+.btnToolContainer  a  {
+    font-family: digicons_three;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-left: 2px;
+    position: absolute;
+    margin-top: -1.25px;
+}
+
+a.tools_menu_variable_button {
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.btnToolContainer:hover 
+{
+    background-color: #0093d2;
+}
+
+#tools .activeMenuEntry
+{
+     background-color: #0093d2;
+}   
+
+#workbook_exercises_container .activeMenuEntry
+{
+     background-color: #0093d2;
+} 
+
+
+#btnContainerMaximizeExerciseMenu {
+    background-color: transparent !important;
+    
+}
+#btnContainerMaximizeExerciseMenu:hover 
+{
+    background-color: transparent !important;
+}
+
+#btnContainerMaximizeExerciseMenu:hover  #btnMaximizeExerciseMenu
+{
+    color: #0093d2;
+}
+
+#btnMaximizeExerciseMenu {
+    color: #756d48;
+    font-size: 29px;
+    text-indent: -2px;
+    margin-top: -3px;
+}
+
+.inputSplitterHorizontal {
+    width: 25px;
+    margin: 3px 0px 6px 3px; 
+    border-bottom:1px dotted gray;    
+}
+
+#exerciseMenuMinimized {
+    top: 7%; 
+}
+
+#exerciseMenuMinimized .activeMenuEntry {
+   background-color: #0093d2;
+}
+
+
+.triangle-border {
+    position: relative;
+    left: 20px;
+    padding: 15px;
+    margin: 1em 0 3em;
+    border: 1px solid gainsboro;
+    color: #333;
+    background: #f9f5ec;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+.triangle-border::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: gainsboro transparent;
+    display: block;
+    width: 0;
+}
+
+
+
+.triangle-border::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 47px;
+    border-width: 13px 13px 0;
+    border-style: solid;
+    border-color: #f9f5ec transparent;    
+    display: block;
+    width: 0;
+}
+
+.triangle-border.left::before {
+    top: 10px;
+    bottom: auto;
+    left: -30px;
+    border-width: 15px 30px 15px 0;
+    border-color: transparent gainsboro;
+}
+.triangle-border.left::after {
+    top: 16px;
+    bottom: auto;
+    left: -21px;
+    border-width: 9px 21px 9px 0;
+    border-color: transparent #f9f5ec;
+}
+
+.tools_extended hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+.tools_extended_entry:hover .tools_extended_icon {
+    color: #0093d2;
+}
+.tools_extended_entry:hover .tools_extended_icon_background {
+    background-color: #0093d2;
+}
+
+.tools_extended_entry:hover .tools_extended_text {
+    text-decoration: underline;
+}
+
+.tools_extended_entry.activeEntry .tools_extended_icon {
+    color: #0093d2;
+}
+
+.tools_extended_entry.activeEntry .tools_extended_icon_background {
+    background-color: #0093d2;
+}
+
+
+.tools_extended_icon_background {
+    display: inline-block;
+    background-color: #756d48;
+    border-radius: 50px;
+    height: 21px;
+    width: 21px;
+}
+
+.tools_extended_icon_background span {
+    color: white;
+    display: block;
+    margin-top: -4px;
+}
+
+.tools_extended_icon_background:hover {
+    background-color: #0093d2;
+}
+
+.tools_extended_icon {
+    font-family: digicons_three;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 26px;
+    color: #75694e;
+    vertical-align: top;
+    cursor: pointer;
+   
+}
+.tools_extended_text {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+#mark.enabled .tools_extended_icon {
+    color: #00c801;
+}
+
+.btnToolContainer.enabled {
+    background-color: #00c801 !important;
+}
+
+
+#editor_color_btns button.selectedColor {
+    border: 2px solid gray !important;
+}
+
+
+#pencilSizeSlider {
+    display: inline-block;
+    width: 108px;
+    margin-left: 55px;
+    background-color: #d1cbbc;
+    border-radius: 10px;
+}
+
+#pencilSizeSlider a {
+    border-radius: 15px;
+    min-width: 15px;
+    margin-left: -7.5px;
+    height: 7px;
+    background: #81775f;
+    cursor: pointer;
+}
+
+#tools_extended_settings, #tools_extended_info {
+    height: auto !important; 
+}
+
+.tools_extended_text.small {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.tools_extended_text.small:hover 
+{
+    text-decoration: underline;
+}

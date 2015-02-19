@@ -1,0 +1,406 @@
+﻿[draggable] {
+  -webkit-user-select: none !important;
+}
+.column.over {
+  border: 2px dashed #000;
+}
+.opacity {
+    opacity: .6;
+}
+.answerBox header {
+    color: #000;
+    font-weight: 600;
+    background-color:#9bd4ff;
+    border-bottom: 4px solid #fff;
+    padding: 3px 3px 5px;
+    -webkit-user-select: none !important;
+}
+
+.answerBox {
+    /*background-color: #9bd4ff;*/
+    /*width: 250px;*/
+    /*margin-top: 18px;*/
+    border: 1px dashed #999;
+    height: 100%;
+}
+.answerBox input {
+    border: none;
+    /*width: 42px;*/
+    /*text-align: center;*/
+    width: 100% !important;
+    padding: 2px;
+    border: 1px solid #CCC /*!important*/;
+    box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+
+.right {
+    border: 2px solid green  !important;
+}
+.wrong {
+    border: 2px solid red  !important;
+}
+.alternative {
+    border: 2px solid orange  !important;
+}
+
+.hint {
+    color: white !important;
+    text-align: center;
+    width: 20px;
+    position: absolute;
+    right: -18px;
+    top: 0;
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+    line-height: 130%;
+    font-weight: bold;
+    font-family: Times New Roman;
+    font-size: 20px;
+}
+.hint-right {
+    background-color: green;
+}
+.hint-wrong {
+    background-color: red;
+}
+
+.hint-alternative {
+    background-color: orange;
+}
+.hint-view {
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    right: 20px;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid blue;
+    z-index: 1000;
+    width: 350px;
+    height: 100px;
+}
+.hint-view::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: -21px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid blue;
+}
+
+.hint-view::before {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    z-index: 1;
+}
+
+
+.answerBox input.error { 
+    border: 1px solid red !important;
+}
+
+span.answerBox { 
+    display: inline-block;
+    border: 0 none;
+}
+
+.answerBox input[type="checkbox"],
+.answerBox input[type="radio"] {
+    width: auto !important;
+}
+
+#dnd_container {
+    width: 675px;
+    -webkit-user-select: none !important;
+}
+
+#dnd_container h1, 
+#sortable_container h1,
+#entry_container h1,
+#combo_container h1,
+#mark_container h1,
+#checkbox_container h1{
+    color: #005da8;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+}
+#dnd_container h1 {
+    margin: 0;
+    color: #000;
+}
+#dnd_container h1 span, 
+#sortable_container h1 span,
+#entry_container h1 span,
+#combo_container h1 span,
+#mark_container h1 span,   
+#checkbox_container h1 span{
+    margin-right: 5px;
+}
+    #dnd_container .dnd_right_content {
+        float: right;
+        height: auto;
+        width: 408px;
+        margin-top: 30px;
+        background: url('../CSS/images/exercise-arrow.jpg') no-repeat 3px 3px transparent;
+    }
+        #dnd_container .dnd_right_content #optionBoxes{
+            width: 313px;
+            margin-left: 92px;
+            border: 1px solid #fff;
+        }
+        /*#dnd_container .dnd_right_content #optionBoxes.over{
+            border: 1px dashed #ccc;
+        }*/
+            #dnd_container .dnd_right_content #optionBoxes .optionBox{
+                width: 234px;
+                background-color: #d9e8ef;
+                padding: 1px 3px;
+                border: 1px solid #005da8;
+                margin: 0 0 12px 0;
+                -webkit-transition: -webkit-transform 0.2s ease-out;
+                -webkit-box-shadow:2px 3px 3px #ccc;
+            }
+            #dnd_container .dnd_right_content #optionBoxes .optionBox.moving {
+                -webkit-transform: scale(0.9);
+            }
+        #dnd_container .dnd_right_content img{
+            width: 315px;
+            height: auto;
+            float: right;
+            margin-top: 18px;
+        }
+
+    #dnd_container .dnd_left_content {
+        width: auto;
+        float: left;
+        margin-left: 15px;
+    }
+        #dnd_container .dnd_left_content #answerBoxes .optionBox,
+        #sortable_container .answerBox #sortable_list .optionBox
+        {
+            width: 234px;
+            background-color: #d9e8ef;
+            padding: 1px 3px;
+            border: 1px solid #005da8;
+            margin: 6px 0 6px 4px;
+            -webkit-transition: -webkit-transform 0.2s ease-out;
+            -webkit-box-shadow:2px 2px 2px #ccc;
+        }
+        #sortable_container .answerBox #sortable_list li.optionBox {
+            list-style: none;
+            text-align: left;
+            width: auto;
+            margin-right: 4px;
+        }
+            #sortable_container .answerBox #sortable_list li.optionBox:hover {
+                cursor: pointer
+            }
+            #sortable_container .answerBox #sortable_list li.ui-sortable-helper:hover,
+            #sortable_container .answerBox #sortable_list li.ui-sortable-helper:focus {
+                cursor: move
+            }
+        #dnd_container .dnd_left_content #answerBoxes .optionBox.moving {
+            -webkit-transform: scale(0.9);
+        }
+        #dnd_container .dnd_left_content #answerBoxes .answerBox {
+            border: 1px solid #fff;
+        }
+        #dnd_container .dnd_left_content #answerBoxes .answerBox.over {
+            /*border: 1px dashed #666;*/
+        }
+        
+.exercise_audio {
+    position: relative;
+    width: 100%;
+    min-height: 45px;
+    -webkit-user-select: none !important;
+}
+
+#btn_container {
+    bottom: 1px;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    -webkit-user-select: none !important;
+}
+    #btn_container a 
+    {
+        font-size: 14px;
+        margin: 15px 0 0 10px;
+        padding: 1px 5px;
+        width: auto;
+        float: right;
+        color: #333;
+        border: 1px solid #005dc6;
+        font-weight: 600;
+    }
+.exercise_audio {
+    background-color: #0093d2;
+}
+    .exercise_audio audio{
+        float: left;
+        margin: 8px 15px;
+    }
+    
+.checkbox_exercise_container {
+    margin: 10px 0 0 5px;
+    text-align: left;
+    float: left;
+}
+    .checkbox_exercise_container .answerBox{
+        width: 180px;
+        padding-bottom: 5px;
+        margin: 0;
+    }
+    .checkbox_exercise_container p{
+        width: auto;
+        margin: 9px 0 3px 0;
+    }
+        .checkbox_exercise_container p span{
+            width: auto;
+            margin: 0 7px 0 7px;
+        }
+            .checkbox_exercise_container p span input{
+                width: auto;
+                margin: 0;
+                outline: 1px solid #9bd4ff;
+            }
+            
+.checkbox_correct {
+    outline: 1px solid #00cc00 !important;
+}
+.checkbox_error {
+    outline: 1px solid #FF0000 !important;
+}
+  
+#additionalContentBox {
+    width: 200px;
+    float: right;
+    margin: 10px;
+}
+    #additionalContentBox img{
+        margin-bottom: 10px;
+    }
+    
+.headline
+{
+    color: #005da8;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 0 10px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+
+.image_E2 {  
+    width: 150px !important;
+    height: auto !important;
+    margin-top: 18px !important;
+}
+
+.answerBox_E2_header {
+    color: #000;
+    font-weight: 600;
+    background-color: #9bd4ff;
+    border-bottom: 4px solid #fff;
+    padding: 3px 3px 5px;
+    -webkit-user-select: none !important;
+    margin-left: 10px;
+    margin-top: 18px;
+    text-align: left;
+}
+
+.answerBox_E2 {
+    padding: 5px;
+    background-color: #9bd4ff;
+    width: 250px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 3px;
+    vertical-align: top;    
+}
+
+.answerBox_E5 {
+    padding: 5px;
+    background-color: #9bd4ff;
+    margin-left: 10px;
+    }
+    .answerBox_E5 p.standard_border{
+        border: 1px solid #9bd4ff;
+    }
+    
+.answerBox_E5_header{
+    color: #000;
+    font-weight: 600;
+    background-color: #9bd4ff;
+    border-bottom: 4px solid #fff;
+    padding: 3px 5px 5px;
+    -webkit-user-select: none !important;
+    margin-left: 10px;
+    margin-top: 18px;
+    text-align: right;
+    word-spacing: 15px;
+    padding-right: 15px;
+}
+
+.standard_border{
+    border: 1px solid #9bd4ff;
+}
+
+.markableText {
+    cursor: url('../CSS/images/marker_cursor.png'), url('../CSS/images/marker_cursor.png'), crosshair !important;
+}
+.markableText:hover {
+    cursor: url('../CSS/images/marker_cursor.png'), url('../CSS/images/marker_cursor.png'), crosshair !important;
+}
+.markableText:default {
+    cursor: url('../CSS/images/marker_cursor.png'), url('../CSS/images/marker_cursor.png'), crosshair  !important;
+}
+
+.markableText.green {
+    cursor: url('../CSS/images/marker_cursor_green.png'), url('../CSS/images/marker_cursor_green.png'), crosshair !important;
+}
+.markableText.green:hover {
+    cursor: url('../CSS/images/marker_cursor_green.png'), url('../CSS/images/marker_cursor_green.png'), crosshair !important;
+}
+.markableText.green:default {
+    cursor: url('../CSS/images/marker_cursor_green.png'), url('../CSS/images/marker_cursor_green.png'), crosshair  !important;
+}
+
+.markable_error {
+    background-color: orange !important;
+}
+
+.markable_correct {
+    background-color: green !important;    
+}
+.markable_correct_red {
+    background-color: red !important;    
+}
+
+.markableText span::selection, .markableText div::selection, .markableText p::selection {
+    background-color: red;
+    cursor: url('../CSS/images/marker_cursor.png'), url('../CSS/images/marker_cursor.png'), crosshair !important;
+}
+
+.markableText.green span::selection, .markableText.green div::selection, .markableText.green p::selection {
+    background-color: green;
+    cursor: url('../CSS/images/marker_cursor_green.png'), url('../CSS/images/marker_cursor_green.png'), crosshair !important;
+}
+
+.markableText .answerBox {
+    background-color: transparent;
+}
+
+.answerBox input[type="checkbox"],
+.answerBox input[type="radio"] {
+    border: 0 none !important;
+}
+
+s { text-decoration: inherit; }

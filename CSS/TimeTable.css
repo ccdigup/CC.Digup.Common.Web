@@ -1,0 +1,268 @@
+﻿/*#timeTable_panel {
+    margin: 0 20px;
+}
+#timeTable_panel h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 15px 0 15px 0;
+}
+#timeTable_panel h4{
+    margin: 5px 20px 5px 0;
+    font-size: 16px;
+}
+
+#timeTable_panel hr{
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+*/
+#show_time_table_headline span {
+    position: absolute;
+    margin-left: -18px;
+}
+
+#timeTable_seachbar {
+
+}
+    #timeTable_seachbar tr td {
+        width: auto;
+        margin: 7px;
+        padding: 2px 4px;
+    }
+    #timeTable_seachbar tr td select{
+        min-width: 65px;
+    }
+    .timeTable_inner_hr {
+        border-top: 1px dotted #ccc !important;
+    }
+.timeTable_exercise_headline {
+    font-weight: 600;
+    margin: 20px 0 5px 0 !important;
+}
+
+#create_own_timeTable_btn:hover, 
+#configure_timaTable_btn:hover,
+#end_configure_timaTable_btn:hover,
+#show_selected_timeTable_material:hover,
+#show_time_table_headline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*#create_own_timeTable_btn:hover .textIcon, */
+#configure_timaTable_btn:hover .textIcon,
+#end_configure_timaTable_btn:hover .textIcon,
+#show_selected_timeTable_material:hover .textIcon{
+    background-color: #78694c;
+}
+
+#create_own_timeTable_btn:hover .textIcon a{
+    color: #78694c;
+}
+
+#create_own_timeTable_btn .textIcon {
+    margin-left: 13px;
+}
+
+#configure_timaTable_btn .textIcon {
+    margin-left: 180px;
+}
+
+#create_own_timeTable_btn .textIcon{
+    background-color: transparent !important;
+}
+#create_own_timeTable_btn .textIcon a {
+    color: #0093d2;
+    font-size: 26px;
+}
+#create_own_timeTable_btn .textIcon a:hover {
+    color: #78694c;
+}
+
+#restore_timeTableData {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    width: 130px;
+    display: none;
+}
+    #restore_timeTableData p{
+        text-align: right;
+        float: left;
+    }
+    #restore_timeTableData #restore_timeTableData_btn {
+        position: relative;
+        float: right;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        padding: 4px;
+    }
+    #restore_timeTableData #restore_timeTableData_btn.active:hover {
+        background: url(images/timetable_refresh_icon_inactive.png) no-repeat center transparent;
+        cursor: pointer;
+    }
+    #restore_timeTableData #restore_timeTableData_btn.inactive {
+        background: url(images/timetable_refresh_icon_inactive.png) no-repeat center transparent;
+    }
+    #restore_timeTableData #restore_timeTableData_btn.active {
+        background: url(images/timetable_refresh_icon.png) no-repeat center transparent;
+    }
+    #timeTable_panel .loadmask{
+        background-color: #fff;
+        opacity: 0.7;
+    }
+   
+#ownTimeTables .ownTimeTables {
+    background: #e0f4fa;
+    width: 233px;
+    margin: 12px 46px 12px 0;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    padding: 7px 20px;
+    text-align: left;
+    float: left;
+}
+#ownTimeTables .ownTimeTables a{
+    font-size: 16px;
+}
+#ownTimeTables .ownTimeTables:hover{
+    outline: 1px solid #0093d2;
+    cursor: pointer;
+}
+#ownTimeTables .ownTimeTables:hover a{
+    color: #0093d2;
+    /*text-decoration: underline;*/
+    /*font-weight: 600;*/
+}
+ 
+/*ICONS*/
+#timeTable_content .timeTable_icon {
+    display: none;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+}
+#timeTable_content .timeTable_minus_icon {
+    background: url(images/timetable_minus_icon.png) no-repeat transparent;
+    margin-left: -17px;
+}
+#timeTable_content .timeTable_plus_icon {
+    background: url(images/timetable_plus_icon.png) no-repeat transparent;
+    margin-left: 39px;
+}
+/*#timeTable_content .timeTable_minus_icon:hover{
+    background: url(images/timetable_minus_icon_hover.png) no-repeat transparent;
+}
+#timeTable_content .timeTable_plus_icon:hover {
+    background: url(images/timetable_plus_icon_hover.png) no-repeat transparent;
+}*/
+
+/*#timeTable_content .educational_reference_table tr.educational_reference_innerContent:hover td {
+    background: url(images/timetable_edit_icon.png) top right no-repeat #e5f2f8;
+}*/
+
+/*#timeTable_content .educational_reference_table tr td[data-changed="true"]
+{
+    background-image: url(images/timetable_changed_corner_icon.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}*/
+
+#timeTable_content .educational_reference_table tr.selected_row td .timeTable_minus_icon{
+    background: url(images/timetable_minus_icon_hover.png) no-repeat transparent;
+}
+#timeTable_content .educational_reference_table tr.selected_row td .timeTable_plus_icon {
+    background: url(images/timetable_plus_icon_hover.png) no-repeat transparent;
+}
+
+#timeTable_content .educational_reference_table tr.selected_row td{
+    background: url(images/timetable_edit_icon.png) top right no-repeat #e5f2f8;
+}
+
+
+#timeTable_content .educational_reference_table tr td[data-changed="true"]
+{
+    background-image:  url(images/timetable_changed_corner_icon.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#timeTable_content .educational_reference_table tr.selected_row td[data-changed="true"]
+{
+    background-image: url(images/timetable_edit_icon.png), url(images/timetable_changed_corner_icon.png);
+    background-position: top right, bottom right;
+    background-repeat: no-repeat;
+}
+
+#timeTable_content .timeTable_minus_icon:hover{
+    background: url(images/timetable_minus_icon_hover.png) no-repeat transparent;
+}
+#timeTable_content .timeTable_plus_icon:hover {
+    background: url(images/timetable_plus_icon_hover.png) no-repeat transparent;
+}
+
+#timeTable_content .educational_reference_table tr.educational_reference_innerContent:hover td {
+    background: url(images/timetable_edit_icon.png) top right no-repeat #cbc4b9;
+    cursor: pointer;
+}
+
+#timeTable_content .educational_reference_table tr.selected_row td .timeTable_icon{
+    display: inherit;
+}
+
+#timeTable_content .educational_reference_innerContent:hover .timeTable_icon{
+    display: inherit;
+}
+
+#ownTimeTables_desc {
+    margin-bottom: 5px;
+}
+
+#ownTimeTables .ownTimeTables .timeTable_edit_icon 
+{
+    background: url(images/timetable_edit_icon_blue.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px 200px;
+    cursor: pointer;
+}
+#ownTimeTables .ownTimeTables .timeTable_edit_icon:hover
+{
+    background: url(images/timetable_edit_icon.png) -3px -3px no-repeat transparent;
+}
+
+#ownTimeTables .ownTimeTables .timeTable_plus_icon 
+{
+    background: url(images/timetable_plus_icon_blue.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px 241px;
+    cursor: pointer;
+}
+#ownTimeTables .ownTimeTables .timeTable_plus_icon:hover
+{
+    background: url(images/timetable_plus_icon.png) no-repeat transparent;
+}
+
+#ownTimeTables .ownTimeTables .timeTable_delete_icon 
+{
+    background: url(images/timetable_delete_icon.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px -31px;
+    cursor: pointer;
+}
+#ownTimeTables .ownTimeTables .timeTable_delete_icon:hover
+{
+    background: url(images/timetable_minus_icon.png) no-repeat transparent;
+}
+    
+/*MISC*/
+#file_handle_options_box {
+    display: none;
+    height: 575px;
+}
+#file_handle_options .loadmask {
+    opacity: 0.7;
+    background-color: #fff;
+}

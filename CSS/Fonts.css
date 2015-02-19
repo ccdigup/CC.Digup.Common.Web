@@ -1,0 +1,90 @@
+﻿@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Sans'), local('DroidSans'), url('fonts/font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ruthie';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Ruthie'), local('Ruthie'), url('fonts/Ruthie-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'unicons';
+  font-style: normal;
+  font-weight: normal;
+  src: local('unicons'), url('fonts/unicons1.0.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'digicons_three';
+  font-style: normal;
+  font-weight: normal;
+  src: local('digicons_three'), url('fonts/digicons_eight_0.010.otf') format('opentype');
+}
+
+
+
+@font-face {
+  font-family: 'ForwardSans-Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ForwardSans-Black'), local('ForwardSans-Black'), url('fonts/ForwardSans/ForwardSans-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('ForwardSans-Bold'), local('ForwardSans-Bold'), url('fonts/ForwardSans/ForwardSans-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-BoldItalic';
+  font-style: italic;
+  font-weight: bold;
+  src: local('ForwardSans-BoldItalic'), local('ForwardSans-BoldItalic'), url('fonts/ForwardSans/ForwardSans-BoldItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-Italic';
+  font-style: italic;
+  font-weight: normal;
+  src: local('ForwardSans-Italic'), local('ForwardSans-Italic'), url('fonts/ForwardSans/ForwardSans-Italic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-Light';
+  font-style: normal;
+  font-weight: lighter;
+  src: local('ForwardSans-Light'), local('ForwardSans-Light'), url('fonts/ForwardSans/ForwardSans-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-LightItalic';
+  font-style: italic;
+  font-weight: lighter;
+  src: local('ForwardSans-LightItalic'), local('ForwardSans-LightItalic'), url('fonts/ForwardSans/ForwardSans-LightItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ForwardSans-Regular'), local('ForwardSans-LightItalic'), url('fonts/ForwardSans/ForwardSans-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-Semi';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ForwardSans-Semi'), local('ForwardSans-Semi'), url('fonts/ForwardSans/ForwardSans-Semi.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-SemiItalic';
+  font-style: italic;
+  font-weight: normal;
+  src: local('ForwardSans-SemiItalic'), local('ForwardSans-SemiItalic'), url('fonts/ForwardSans/ForwardSans-SemiItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ForwardSans-Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('ForwardSans-Thin'), local('ForwardSans-Thin'), url('fonts/ForwardSans/ForwardSans-Thin.otf') format('opentype');
+}

@@ -1,0 +1,386 @@
+﻿.workSheetEditorMenuPopup 
+{
+    z-index: 25 !important;
+    /*height: 90% !important;
+    width: 24.5% !important;
+    left: 4% !important;
+    top: 5% !important;*/
+    display: block;
+    height: auto !important;
+    left: 40px !important;
+    top: 5% !important;
+    padding-bottom: 10px;
+    min-height: 697px;
+    max-height: 90%;
+    width: 250px !important;
+    
+}
+.workSheetEditorMenuPopup .ui-dialog-titlebar {
+    display: none !important;
+}
+
+.workSheetEditorViewPopup 
+{
+    z-index: 26 !important;
+    display: block;
+    outline: 0px;
+    height: auto;
+    width: 702px !important;
+    top: 29px;
+    left: 159px;
+    height: auto !important;
+    min-height: 697px;
+    max-height: 90%;
+    left: 310px !important;
+    top: 5% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding-bottom: 10px;
+/*    height: 90% !important;
+    width: 68% !important;
+    left: 30% !important;
+    top: 5% !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;*/
+}
+.workSheetEditorViewPopup .ui-dialog-titlebar {
+    padding: 0em 3em;
+    position: absolute;
+    margin-left: 85%;
+}
+
+#workSheetEditorView {
+    padding-bottom: 20px;
+}
+
+#workSheetEditorFrame {
+    -webkit-user-select: all;
+    border: 1px dotted #aaaaaa;
+    width: 480px !important;
+    height: 637px !important;
+    max-width: 480px !important;
+    min-height: 637px !important;
+    box-shadow: 8px #bbb;
+    font-family:Arial !important;
+}
+
+
+#workSheetEditor {
+    -webkit-user-select: all;
+    width: 420px !important;
+    height: 577px !important;
+    max-width: 420px !important;
+    min-height: 577px !important;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#workSheetEditorMenu .workSheetEditor_options h3{
+    margin: 10px 0 0 18px;
+    padding: 2px;
+    font-family: ForwardSans-Regular !important;
+    font-size: 15px;
+}
+#workSheetEditorMenu .workSheetEditor_options h3 a:hover{
+    text-decoration: underline;
+}
+#workSheetEditorMenu .workSheetEditor_options h3 a span{
+    position: absolute;
+    margin-left: -18px;
+}
+#workSheetEditorMenu .workSheetEditor_option_panel{
+    margin: 0 0 0 30px;
+}
+
+#workSheetEditorMenu .workSheetEditor_option_panel button
+{
+    border: none;
+    background: none;
+    margin-top: 5px;
+    cursor: pointer;
+    font-family: ForwardSans-Regular !important;
+    font-size: 15px;
+}
+#workSheetEditorMenu .workSheetEditor_option_panel button:hover{
+    color: #0093d2;
+}
+
+#workSheetEditorMenu .workSheetEditor_option_panel .disabled {
+    cursor: default;
+    color: lightgray;
+} 
+#workSheetEditorMenu .workSheetEditor_option_panel .disabled:hover 
+{
+    color: lightgray;
+}
+
+.workSheetTextField 
+{
+    min-width: 150px;
+    min-height: 50px;
+    height: auto !important;
+    width: auto;
+    /*border: dotted gray thin;*/
+    outline: 1.5px solid #0093d2;
+    position: absolute !important;
+    /*margin: 30px 30px 25px 30px;*/
+    max-width: 420px;
+    cursor: move;
+}
+
+.workSheetActiveElement {
+    background: #e0f4fa;
+    outline: #e0f4fa solid medium;
+    /*margin: 28px 28px 23px 28px;*/
+}
+
+.draggableContainer.workSheetActiveElement {
+    /*margin: 27px 27px 22px 27px !important;*/
+     outline: #0093d2 solid medium;
+     
+}
+
+.workSheetImage {
+    width: 200px;
+    height: auto;
+    /*max-width: 355px;*/
+    min-width: 20px;
+}
+
+
+.workSheetHandler {
+    font-family: digicons_three;
+    display: inline;
+    position: absolute;
+    font-size: 1.5em;
+    margin-top: -12px;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-color: #0093d2;
+    color: white;
+    border-radius: 50px;
+    text-indent: 1px;
+    vertical-align: top;
+}
+
+.workSheetHandler_text {
+    background-color: #756d48;
+}
+
+.workSheetHandler_text_resize {
+    background-color: white;
+    text-indent: 0px;
+    color: #756d48;
+    font-size: 23.5px;
+    line-height: 19px;
+}
+
+
+.workSheetHandler_text_resize:hover {
+    
+    color: #756d48  !important;
+}
+
+.workSheetHandler span 
+{
+    display: block;
+    margin-left: 1px;
+    margin-top: -1px;
+}
+
+.workSheetTextField_editor   {
+    word-wrap: break-word !important;
+
+}
+
+.workSheetTextField_editor div  {
+    word-wrap: break-word !important;
+
+}
+
+.workSheetHandler:hover
+{
+    color: #e0f4fa;
+   
+}
+
+.workSheetHandler_draggable {
+    margin-left: 50%;
+    left: -10px;
+    cursor: move;
+    /*background-color: #e0f4fa;*/
+}
+
+.workSheetHandler_resize {
+    margin-left: 100%;
+    right: -10px;
+    cursor: ew-resize;
+    pointer-events:none ;
+}
+
+.ui-icon-gripsmall-diagonal-se {
+    z-index: 0 !important;
+    right: -2px !important;
+    bottom: 0px !important;
+}
+
+.workSheetHandler_text_edit 
+{
+    background-color: #756d48;
+    top: 11px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.workSheetHandler_delete {
+    margin-left: -10px;
+    
+}
+
+#workSheetEditor .crosswordHints .workSheetHandler_delete {
+    display: inherit;
+}
+
+.draggableContainer {
+    /*display:inline-block;*/
+    float: left;
+    cursor: move;
+    /*margin: 30px 30px 25px 30px;*/
+    max-width: 418px;
+}
+
+.draggableContainer .workSheetHandler_draggable {
+    /*background-color: transparent;*/
+}
+
+.draggableContainer .workSheetHandler_delete {
+    top: 0%;    
+}
+
+.draggableContainer .workSheetHandler_resize, .crosswordTable .workSheetHandler_resize {
+    cursor: se-resize;
+    top: 100%;
+}
+
+
+/*** Crossword ***/
+
+
+#workSheetEditor .crosswordHints #crosswordHintsBoxVertical{
+    float: left;
+} 
+
+#workSheetEditor .crosswordHints #crosswordHintsBoxHorizontal {
+    float: right; 
+}
+#workSheetEditor .crosswordHints #crosswordHintsBoxHorizontal .crosswordHintsHeaderHorizontal{
+    margin-top: 0px;
+}
+
+#workSheetEditor .crosswordHints {
+    float: none;
+    width: 350px;
+    max-width: none;
+    margin-top: auto;
+    max-height: auto;
+    height: auto;
+    overflow: visible;
+    position: absolute !important;
+    cursor: move;
+   
+}
+
+#workSheetEditor .crosswordTable 
+{
+    cursor: move;   
+    position: absolute !important;
+    
+}
+
+/*** ImageElements Box ***/
+
+#imageElements_content {
+    width: 480px;
+    min-height: 175px;
+    text-align: left;
+    outline: 1px solid #e2e2e2;
+    margin: 10px 19px 25px 19px;
+    box-shadow: inset 2px 2px 10px #666;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+#imageElements_content_table {
+    display: table;
+}
+
+#imageElements_content_row {
+    display: table-row
+}
+
+#imageElements_content div {
+   display: table-cell ;
+   
+}
+#imageElements_content img {
+    height: 120px;
+    width: auto;
+    margin: 15px;
+    cursor: pointer;
+    
+}
+
+.workSheetSelectedImage  {
+    outline: #0000FF  2px solid;
+    margin: 13px !important;
+}
+
+.activeElement {
+    border: #e0f4fa medium solid;
+}
+
+.workSheetPaddingLineLeft {
+    border-left: 1px dotted #aaaaaa;
+    position: relative;
+    margin-left: 30px;
+    height: 100%;
+    float: left;
+    top: -1px;
+}
+
+.workSheetPaddingLineRight {
+    border-left: 1px dotted #aaaaaa;
+    position: relative;
+    margin-right: 30px;
+    height: 100%;
+    float: right;
+    top: -1px;
+}
+
+.workSheetPaddingLineBottom {
+    border-bottom: 1px dotted #aaaaaa;
+    position: relative;
+    top: 610px;
+    width: 100%;
+}
+
+.workSheetPaddingLineTop {
+    border-bottom: 1px dotted #aaaaaa;
+    position: relative;
+    top: 30px;
+    width: 100%;
+}
+
+.workSheetActiveElement .ui-icon-gripsmall-diagonal-se {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    margin-bottom: -8px;
+    margin-right: -8px;
+}
+
+#workSheetEditor .workSheetElement.ui-draggable .ui-wrapper{
+    overflow: visible !important;
+}

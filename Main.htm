@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <meta charset="utf-8">
+        <title>DigUP</title>
+        <!-- Stylesheet -->
+        <link href="CSS/jquery-ui-1.8.23.custom.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/flexslider.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/MaximizedNavigation.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/Fonts.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/TimeTable.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/WorkSheet.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/TextElements.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/Crosswords.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/MainStyle.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/NavigationBar.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/Toolbar.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/Exercise.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/WorkSheetEditor.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/CrosswordEditor.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/Editor.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/ResizeStyles.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/Print.css" rel="stylesheet" type="text/css" media="print"  />
+        <link href="CSS/PrintView.css" rel="stylesheet" type="text/css"/>
+        <link href="CSS/elements.css" rel="stylesheet" type="text/css"/>
+        <!-- External -->
+        <script type="text/javascript" src="Scripts/External/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="Scripts/External/jquery-ui-1.8.23.custom.min.js"></script>
+        <script src="Scripts/External/jszip.js" type="text/javascript"></script>
+        <script src="Scripts/External/jszip-load.js" type="text/javascript"></script>
+        <script src="Scripts/External/jszip-deflate.js" type="text/javascript"></script>
+        <script src="Scripts/External/jszip-inflate.js" type="text/javascript"></script>
+        <script src="Scripts/External/jquery.loadmask.min.js" type="text/javascript"></script>
+        <script src="Scripts/External/nicEdit.js" type="text/javascript"></script>
+        <script src="Scripts/External/jquery.flexslider.js" type="text/javascript"></script>
+        <script src="Scripts/External/jquery.dataTables.js" type="text/javascript"></script>
+        <!-- Internal -->
+        <script src="Config/Settings.js" type="text/javascript"></script>
+        <script src="Scripts/Print.js" type="text/javascript"></script>
+        <script src="Scripts/DBTables.js" type="text/javascript"></script>
+        <script src="Scripts/IndexedDB.js" type="text/javascript"></script>
+        <script src="Scripts/InteractiveExercises/SortableExercises.js" type="text/javascript"></script>
+        <script src="Scripts/InteractiveExercises/RadioButtonExercises.js" type="text/javascript"></script>
+        <script src="Scripts/InteractiveExercises/CheckBoxExercises.js" type="text/javascript"></script>
+        <script src="Scripts/InteractiveExercises/EntryExercises.js" type="text/javascript"></script>    
+        <script src="Scripts/InteractiveExercises/DragAndDropTextFieldsExercises.js" type="text/javascript"></script>
+        <script src="Scripts/InteractiveExercises/ComboButtonExercises.js" type="text/javascript"></script>  <!-- Addnew: new type for the combo box button-->
+        <script src="Scripts/InteractiveExercises/MarkableExercises.js" type="text/javascript"></script>  <!-- Addnew: new type for the combo box button-->
+        <script src="Scripts/Canvas.js" type="text/javascript"></script>
+        <script src="Scripts/FileManagement.js" type="text/javascript"></script>
+        <script src="Scripts/Navigation.js" type="text/javascript"></script>
+        <script src="Scripts/WorkSheet.js" type="text/javascript"></script>
+        <script src="Scripts/TimeTable.js" type="text/javascript"></script>
+        <script src="Scripts/TextElements.js" type="text/javascript"></script>
+        <script src="Scripts/Crosswords.js" type="text/javascript"></script>
+        <script src="Scripts/AudioVideoControl.js" type="text/javascript"></script>
+        <script src="Scripts/Exercise.js" type="text/javascript"></script>
+        <script src="Scripts/Editor.js" type="text/javascript"></script>
+        <script src="Scripts/DAO.js" type="text/javascript"></script>
+        <script src="Scripts/DBFunctions.js" type="text/javascript"></script>
+        <script src="Scripts/ReadyFunctions.js" type="text/javascript"></script>
+        <script src="Scripts/ToolBox.js" type="text/javascript"></script>
+        <script src="Scripts/Functions.js" type="text/javascript"></script>
+        <script src="Scripts/Custom.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div style="position: fixed; width: 100%; height: 100%; z-index: 18; display: none;" id="clickFaker"></div>
+        <div id="digUp">
+            <div id="maximized_navigation" class="boxShadow">
+                <div class="menu_border menu_border_left">
+                    <div class="btnContainer_max btnContainer_max_left">
+                        <div id="maximized_navigation_slideLeft_btn" class="btnContainer navigationItem">
+                            <a>2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_border menu_border_right">
+                    <div class="btnContainer_max btnContainer_max_right">
+                        <div id="maximized_navigation_slideRight_btn" class="btnContainer navigationItem">
+                            <a>3</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="maximized_menu_content">
+                    <div class="table">
+                        <div class="tableRow">
+                            <!-- Dynamic MaximizedMenu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navigationExercise" class="boxShadow navigation navigationExercise" style="display: none;">
+                <div class="btnContainer navigationItem">
+                    <a id="exercise_back">2</a></div>
+                <div class="navigationSplitter">
+                </div>
+                <div class="btnContainer navigationItem">
+                    <a id="exercise_forward">3</a></div>
+            </div>
+            <div id="navigation" class="boxShadow navigation">
+                <div class="btnContainer navigationItem">
+                    <a id="index">©</a></div>
+                <div class="navigationSplitter">
+                </div>
+                <div class="btnContainer navigationItem">
+                    <a id="section_back">[</a></div>
+                <div class="btnContainer navigationItem">
+                    <a id="page_back">2</a></div>
+                <div class="btnContainer navigationItem">
+                    <a id="maximize_menu">ä</a></div>
+                <div class="btnContainer navigationItem">
+                    <a id="page_forward">3</a></div>
+                <div class="btnContainer navigationItem">
+                    <a id="section_forward">]</a></div>
+                <div class="navigationSplitter">
+                </div>
+                <div class="inputContainer">
+                    <span>6</span><input value="" id="goto_page_input" min="0" max="100" step="2" value="0" /></div>
+            </div>
+            <div id="tools" class="boxShadow sideBar" style="display: none">
+                <ul class="first_menu">
+                    <li>
+                        <div class="btnToolContainer">
+                            <a id="whiteboard_tools"  title="Whiteboard-Werkzeuge" class="tools_menu_button">Ö</a></div>
+                        <ul class="triangle-border left second_menu boxShadow">
+                            <li>
+                            
+                                <div class="tools_extended">
+                                    <div id="mark" class="tools_extended_entry"><span class="tools_extended_icon">|</span><span class="tools_extended_text">Whiteboardmodus: </span><span id="markText" class="tools_extended_text">aus</span></div>
+                                    <hr/>
+                                    <div style="display: inline-block"  >
+                                        <div id="pencil" style="display: inline-block"  class="tools_extended_entry">
+                                            <div class="tools_extended_icon  tools_extended_icon_background"> <span>Ö</span></div><span class="tools_extended_text">Stift</span>
+                                        </div>
+                                        <div id="rubber" style="display: inline-block"  class="tools_extended_entry">
+                                            <div class="tools_extended_icon tools_extended_icon_background" style="margin-left: 40px;"><span>ï</span></div><span class="tools_extended_text">Radierer</span>
+                                        </div>    
+                                    </div>
+                                    
+                                    <hr/>
+                                    <div id="editor_color_btns">
+                                        <span  style="vertical-align: top; margin-left: 38px;" class="tools_extended_text">Farbe</span>
+                                        <table style="vertical-align: top; display: inline-block; margin-top: -3px; margin-left: 43px;">
+                                            <tr>
+                                                <td>
+                                                    <button class="fillColor_type selectedColor" id="editor_color_black_btn" data-tag="forecolor" data-value="0,0,0"></button>
+                                                    <button class="fillColor_type" id="editor_color_red_btn" data-tag="forecolor" data-value="230,0,0"></button>
+                                                    <button class="fillColor_type" id="editor_color_green_btn" data-tag="forecolor" data-value="0,198,0"></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="fillColor_type" id="editor_color_blue_btn" data-tag="forecolor" data-value="0, 146, 207"></button>
+                                                    <button class="fillColor_type" id="editor_color_yellow_btn" data-tag="forecolor" data-value="239,230,0"></button>
+                                                    <button class="fillColor_type" id="editor_color_orange_btn" data-tag="forecolor" data-value="249, 139,0"></button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                
+                                    <div id="useTransparency" class="tools_extended_entry" style="margin-top: 10px;">
+                                        <span style="margin-left: 37px;" class="tools_extended_text">Transparent</span><span style="font-size: 19px; margin-left: 16px;" class="tools_extended_icon">C</span>
+                                    </div>
+                                    <div  id="tools_extended_entry" style="margin-top: 10px; display: inline-block" >
+                                        <span class="tools_extended_text" style="margin-left: 37px;">Breite</span><div id="pencilSizeSlider">
+                                                                                                                  </div>
+                                    </div>
+                                    <hr />
+                                    <div id="clearCanvas" class="tools_extended_entry"><span class="tools_extended_icon">X</span><span class="tools_extended_text">Tafelanschrieb löschen</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer">
+                            <a title="Hilfsmittel" id="utilities" class="tools_menu_button">Ü</a></div>
+                    
+                    </li>
+                    <li>
+                        <div class="inputSplitterHorizontal">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer">
+                            <a id="settings"  title="Programmstart" class="tools_menu_button">e</a></div>
+                        <ul class="triangle-border left second_menu boxShadow" style="top: 75px;">
+                            <li>  <div class="tools_extended" id="tools_extended_settings" >
+                                      <span class="tools_extended_text" >Programmstart</span>
+                                      <hr/>
+                                      <div id="intro" class="tools_extended_entry" style="margin-top: 10px;">
+                                          <span style="font-size: 26px;" class="tools_extended_icon">C</span><span style="display: inline-block;margin-left: 35px; margin-top: -17px;" class="tools_extended_text">Einführung bei jedem Programmstart anzeigen</span>
+                                      </div>
+                                    
+                                  </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer">
+                            <a id="info"  title="Info" class="tools_menu_button">i</a></div>
+                        <ul class="triangle-border left second_menu boxShadow" style="top: 105px;">
+                            <li>
+                                <div class="tools_extended" id="tools_extended_info" >
+                                    <div class="tools_extended_text" >Info</div>
+                                    <hr/>
+                                    <div id="btnToolsShowIntro" class="tools_extended_text small" >Einführung anzeigen</div>
+                                    <hr/>
+                                    <div id="btnToolsShowImprint" class="tools_extended_text small" >Impressum</div>
+                                    <div id="btnToolsShowSourceDirectory" class="tools_extended_text small" >Quellenverzeichnis</div>
+                                    <div id="btnToolsShowSupport" class="tools_extended_text small" >Support</div>
+                                    <div id="btnToolsShowLicense" class="tools_extended_text small" >Lizenz</div>
+<!--                                    <div id="btnToolsShowMediaLibrary" class="tools_extended_text small" >Medienbibliothek</div>-->
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="exerciseMenuMinimized" style="display: none" class="boxShadow sideBar">
+                <ul class="first_menu">
+                    <li>
+                        <div class="btnToolContainer" id="btnContainerMaximizeExerciseMenu">
+                            <a id="btnMaximizeExerciseMenu" title="Maximieren" class="tools_menu_button">></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputSplitterHorizontal">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer btnExercise">
+                            <a id="btnExerciseOnly" title="Übungsansicht" class="tools_menu_button btnExercise">6</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer btnExercise">
+                            <a id="btnInterActiceExercise" title="Interaktive Version" class="tools_menu_button btnExercise">n</a>
+                        </div>
+                    
+                        <ul class="triangle-border left second_menu boxShadow" style="top: 95px; width: 120px;">
+                                               
+                        </ul>
+                    </li>
+                   
+                        <li>
+                            <div class="inputSplitterHorizontal" id="workbook_exercises_splitter">
+                            </div>
+                        </li>
+                        <li id="workbook_exercises_container">
+                            <div class="btnToolContainer btnExercise" id="workbook_exercises">
+                                <a id="btnAdditionalExercises" title="Arbeitsbuch-Übungen" class="tools_menu_button btnExercise">
+                                    5</a></div>
+                            <ul class="triangle-border left second_menu boxShadow" style="top: 115px; width: 60px;">
+                      
+                            </ul>
+                        </li>
+                       
+                    <li>
+                        <div class="inputSplitterHorizontal">
+                        </div>
+                    </li>
+                   
+                    <li>
+                        <div class="btnToolContainer btnResource">
+                            <a id="btnExerciseAudio" title="Audio" class="tools_menu_button btnResource">³</a></div>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer btnResource">
+                            <a id="btnExerciseVideo" title="Video" class="tools_menu_button btnResource">~</a></div>
+                    </li>
+                    <li>
+                        <div class="btnToolContainer btnResource">
+                            <a id="btnExerciseImage" title="Bilder" class="tools_menu_button btnResource">u</a></div>
+                    </li>
+                    <!-- <li>
+                             <div class="btnToolContainer btnResource">
+                                 <a id="btnExerciseText" title="Text" class="tools_menu_button btnResource">è</a></div>
+                         </li>-->
+                </ul>
+            </div>
+            <div id="content" >
+                <div id="page">
+                    <div id="left_page" class="content_page">
+                        <img src='Media/Lessons/blank.gif' usemap='#page_left' />
+                    </div>
+                    <div id="right_page" class="content_page">
+                        <img src='Media/Lessons/blank.gif' usemap='#page_right' />
+                        <div style="height: 533px; width: 50px; color: gray; opacity: 0.5; background-color: gray;"></div>
+                    </div>
+                </div>
+                <map id='map_page_left' class="map_page" name='page_left'>
+                    <!-- Dynamic map-shapes -->
+                </map>
+                <map id='map_page_right' class="map_page" name='page_right'>
+                    <!-- Dynamic map-shapes -->
+                </map>
+                <div id="page2">
+                    <div id="left_page2" class="content_page">
+                        <img src='Media/Lessons/blank.gif' />
+                    </div>
+                    <div id="right_page2" class="content_page">
+                        <div style="height: 533px; width: 50px; color: gray; opacity: 0.5; background-color: gray;"></div>
+                        <img src='Media/Lessons/blank.gif' />
+                    </div>
+                </div>
+                <canvas id="markableContext" width="100%" height="100%" style="margin: 0; padding: 0; cursor: pointer; z-index: -1;">
+                </canvas>
+                <div id="exerciseMenu">
+                    <h3>
+                        <a class="bold exerciseMenu_entry" data-toggle="true" id="coursebook"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                              </span>Kursbuch</a></h3>
+                    <div id="coursebook_options" class="exerciseMenu_options">
+                        <p>
+                            <a id="material_options_singleView">Übungsansicht</a><br />
+                            <span id="interactive_exercise_list"></span>
+                        </p>
+                    </div>
+                   <h3 id="workbook_exercises_menu_container">
+                            <a class="bold exerciseMenu_entry" data-toggle="false" id="workbook"><span class="ui-icon ui-icon-triangle-1-e">
+                                                                                                 </span>Arbeitsbuch-Übungen</a></h3>
+                        <div id="workbook_options" class="exerciseMenu_options" style="display:none !important;">
+                    
+                        </div>
+                        
+                    <h3>
+                        <a class="uppercase exerciseMenu_entry" data-toggle="true" id="material"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                                 </span>Material</a></h3>
+                    <div id="material_options" class="exerciseMenu_options" >
+                        <p>
+                            <a id="material_options_audio">Audio</a><br />
+                            <a id="material_options_video">Video</a><br />
+                            <a id="material_options_picture">Bilder</a><br />
+                       
+                        </p>
+                    </div>
+                    <h3>
+                        <a class="uppercase exerciseMenu_entry" data-toggle="false" id="eucationalreference"><span class="ui-icon ui-icon-triangle-1-e">
+                                                                                                             </span>LEHRERINFOS</a></h3>
+                    <div id="eucationalreference_options" class="exerciseMenu_options" style="display:none !important;">
+                        <p>
+                            <a id="material_options_text">Text</a><br/>
+                            <a id="material_options_solution">Lösung</a><br />
+                            <a id="material_options_educationalReference" style="line-height: 1 !important;">Methodisch-didaktische Hinweise</a><br />
+                            <a id="material_options_vocabulary">Neuer Wortschatz</a><br />
+                            <a id="material_options_masterCopies">Kopiervorlagen</a><br/>
+                            <a id="material_options_blackboardView">Modultest</a>
+                        </p>
+                    </div>
+                    <div id="file_handle_options_box" style="display: none;">
+                        <h3>
+                            <a class="bold exerciseMenu_entry" id="file_handle" data-toggle="true"><span class="ui-icon ui-icon-triangle-1-e">
+                                                                                                   </span>Datei</a></h3>
+                        <div id="file_handle_options" class="exerciseMenu_options" style="display:none !important;">
+                            <p>
+                                <a id="file_save">Speichern</a><br />
+                                <a id="file_saveAs">Speichern unter ...<br /></a>
+                                <a id="file_export">Exportieren ...</a><br />
+                                <a id="file_print">Drucken ...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="teacher_toolbox">
+                        <h3>
+                            <a class="uppercase exerciseMenu_entry" data-toggle="false" id="teacher_tools"><span class="ui-icon ui-icon-triangle-1-e">
+                                                                                                           </span>Hilfsmittel</a></h3>
+                        <div id="teacher_tools_options" class="exerciseMenu_options" style="display:none !important;">
+                            <p>
+                                <a id="teacher_materials_educationReference">Unterrichtsplaner</a><br />
+                                <a id="teacher_materials_worksheet">Arbeitsblatt</a><br />
+                                <a id="teacher_materials_crossword">Kreuzworträtsel</a><br />
+                                <a id="teacher_materials_textElements" >Editor</a><br />
+                                <a id="teacher_materials_vocabulary">Wortliste</a><br />
+                                <a id="teacher_materials_media">Medienbibliothek</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="exerciseView">
+                    <div id="exercise">
+                    </div>
+                    <div id="exerciseSplitter" style="display: none">
+                        <div id="btnCloseExerciseContent" class="btnContainer navigationItem btnCloseContent" >
+                            <a id="A1">X</a>
+                        </div>
+                        <span id="exerciseContentHeader"></span>
+                        <hr />
+                    </div>
+                    <div id="exercise_content" data-content="blank">
+                    </div>
+                </div>
+            
+                <div id="editorMenu">
+                    <div class="editor_options">
+                        <h3>
+                            <a class="bold editor_menu_group" id="editor_save"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                               </span>Textelement</a></h3>
+                        <div id="editor_save_options" class="editor_option_panel">
+                            <p>
+                                <button id="editor_save_changes">Änderungen übernehmen</button>
+                                <button id="editor_save_changes_inactive">Änderungen übernehmen</button>
+                                <br />
+                                <button id="editor_saveas">Speichern unter ...</button>
+                                <button id="editor_saveas_inactive">Speichern unter ...</button>
+                                <br />
+                                <button id="editor_export">Exportieren ...</button>
+                                <br />
+                                <button id="editor_print">Drucken ...</button>
+                                <!--<a id="A5">Drucken</a>-->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="editor_options">
+                        <h3>
+                            <a class="bold editor_menu_group" id="editor_execute"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                  </span>Bearbeiten</a></h3>
+                        <div id="editor_execute_options" class="editor_option_panel">
+                            <p>
+                                <button id="editor_cutText_btn" data-tag="cut">Ausschneiden</button><br />
+                                <button id="editor_copyText_btn" data-tag="copy">Kopieren</button><br />
+                                <button id="editor_pasteText_btn" data-tag="paste">Einfügen</button><br />
+                                <button id="editor_undo_btn" data-tag="undo">Rückgängig</button><br />
+                                <button id="editor_insert_textSnippet" data-tag="undo">Text einfügen...</button><br />
+                                <button id="editor_removeFormat_btn" data-tag="removeFormat">Formatierung löschen</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="editor_options">
+                        <h3>
+                            <a class="bold editor_menu_group" id="editor_fontFamily"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                     </span>Schriftart</a></h3>
+                        <div id="editor_fontFamily_options" class="editor_option_panel">
+                            <p>
+                                <button id="editor_fontFamily_ForwardSans_btn" data-value="Times" data-tag="fontname">Times</button><br />
+                                <button id="editor_fontFamily_LiberationSerif_btn" data-value="Arial" data-tag="fontname">Arial</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="editor_options">
+                        <h3>
+                            <a class="bold editor_menu_group" id="editor_font"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                               </span>Schrift</a></h3>
+                        <div id="editor_font_options" class="editor_option_panel">
+                            <p>
+                                <button id="editor_italic_btn" data-tag="italic">Kursiv</button><br />
+                                <button id="editor_bold_btn" data-tag="bold">Fett</button><br />
+                                <button id="editor_underline_btn" data-tag="underline">Unterstrichen</button><br />
+                                <span id="editor_color_btns">Farbe 
+                                    <button id="editor_color_black_btn" data-tag="forecolor" data-value="000000"></button>
+                                    <button id="editor_color_red_btn" data-tag="forecolor" data-value="e60000"></button>
+                                    <button id="editor_color_green_btn" data-tag="forecolor" data-value="00c600"></button>
+                                    <button id="editor_color_blue_btn" data-tag="forecolor" data-value="0092cf"></button>
+                                    <button id="editor_color_yellow_btn" data-tag="forecolor" data-value="efe600"></button>
+                                    <button id="editor_color_orange_btn" data-tag="forecolor" data-value="f98b00"></button>
+                                </span><br />
+                                <span id="editor_font_size_btns">Größe 
+                                    <button id="editor_p_btn" data-value="1" data-tag="heading"></button>
+                                    <button id="editor_h2_btn" data-value="2" data-tag="heading"></button>
+                                    <button id="editor_h1_btn" data-value="3" data-tag="heading"></button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="editor_options">
+                        <h3>
+                            <a class="bold editor_menu_group" id="editor_toolbox"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                  </span>Toolbox</a></h3>
+                        <div id="editor_toolbox_options" class="editor_option_panel">
+                            <p>
+                                <button id="editor_replaceWithUnderscore_btn" >Wörter durch ____ ersetzen</button><br />
+                                <button id="editor_mixupPhrases_btn" >Satzmixer</button><br />
+                                <button id="editor_mixupWords_btn" >Wortmixer</button><br />
+                                <button id="editor_mixupCharacters_btn" >Buchstabenmixer</button><br />
+                                <button id="editor_wordChain" >Wortschlange</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="editorView">
+                    <div class="notification_box"></div>
+                    <div contenteditable="false" id="editor" style="font-size: 1.0em; font-family: Arial; width: 650px;">
+                    </div>
+                    <div id="restore_original_text_container">
+                        <hr/>
+                        <p>Von diesem Text gibt es eine Original-Version.<br/>
+                            Klicken Sie hier, wenn Sie alle Änderungen an diesem Text zurücksetzen möchten.
+                        </p>
+                        <span id="restore_original_text_btn"><div class="textIcon"><a>c</a></div>Alle Änderungen zurücksetzen</span>
+                    </div>
+                </div>
+            
+                <div id="workSheetEditorMenu">
+                    <div class="workSheetEditor_options">
+                        <h3>
+                            <a class="bold workSheetEditor_menu_group" id="workSheetEditor_save"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                                 </span>Datei</a></h3>
+                        <div id="workSheetEditor_save_options" class="workSheetEditor_option_panel">
+                            <p>
+                                <button id="btnWorkSheet_Save">Speichern</button>
+                                <br />
+                                <button id="btnWorkSheet_SaveAs">Speichern unter ...</button>
+                                <br />
+                                <button id="btnWorkSheet_Export">Exportieren ...</button>
+                                <br/>
+                                <button id="btnWorkSheet_Print">Drucken ...</button>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workSheetEditor_options">
+                        <h3>
+                            <a class="bold workSheetEditor_menu_group" id="workSheetEditor_text"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                                 </span>Textelement</a></h3>
+                        <div id="workSheetEditor_text_options" class="workSheetEditor_option_panel">
+                            <p>
+                                <button id="btnWorkSheet_AddText" data-tag="addText">Neu</button><br />
+                                <button id="btnWorkSheet_ImportText" data-tag="pasteText">Einfügen...</button><br />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workSheetEditor_options">
+                        <h3>
+                            <a class="bold workSheetEditor_menu_group" id="workSheetEditor_image"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                                  </span>Bild</a></h3>
+                        <div id="workSheetEditor_image_options" class="workSheetEditor_option_panel">
+                            <p>
+                                <button id="btnWorkSheet_AddImage" data-value="Verdana" data-tag="addImage">Einfügen...</button><br />
+                            
+                            </p>
+                        </div>
+                    </div>
+                    <div class="workSheetEditor_options">
+                        <h3>
+                            <a class="bold workSheetEditor_menu_group" id="workSheetEditor_crossword"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                                                      </span>Kreuzworträtsel</a></h3>
+                        <div id="workSheetEditor_crossword_options" class="workSheetEditor_option_panel">
+                            <p>
+                                <button id="btnWorkSheet_AddCrossword" data-tag="addCrossword">Neu</button><br />
+                                <button id="btnWorkSheet_AddExistingCrossword" data-tag="pasteCrossword">Einfügen...</button><br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="workSheetEditorView" >
+                    <div id="workSheet_panel" class="tools_panel">
+                        <div class="notification_box notification_box_worksheet"></div>
+                        <br/>
+                        <h1 id="worksheet_name">Neues Arbeitsblatt</h1>
+                        <br/>
+                        <h4 id="workSheet_header">Fügen Sie bestehende Texte, Bilder oder Kreuzworträtsel ein oder erstellen Sie neue Texte und Kreuzworträtsel.</h4>
+                        <hr/>
+                        <div id="workSheetEditorFrame" class="boxShadow">
+                        
+                            <div class="workSheetPaddingLineTop"></div>
+                            <div class="workSheetPaddingLineRight"></div>
+                            <div class="workSheetPaddingLineBottom"></div>
+                            <div class="workSheetPaddingLineLeft"></div>
+                            <div contenteditable="false" id="workSheetEditor"  style="font-size: 1.0em;"/>
+                        </div>
+                        
+                    </div>
+                </div>
+              
+             
+            
+            
+                <div id="crosswordEditorMenu">
+                    <div class="crosswordEditor_options">
+                        <h3>
+                            <a class="bold crosswordEditor_menu_group" id="A2"><span class="ui-icon ui-icon-triangle-1-s">
+                                                                               </span>Datei</a></h3>
+                        <div id="Div2" class="crosswordEditor_option_panel">
+                            <p>
+                                <button id="btnCrossword_Save">Speichern</button>
+                                <br />
+                                <button id="btnCrossword_SaveAs">Speichern unter ...</button>
+                                <br />
+                                <button id="btnCrossword_Export">Exportieren ...</button>
+                                <br />
+                                <button id="btnCrossword_Print">Drucken ...</button>
+                                <br />
+                                <button id="btnCrossword_SaveChanges" style="display: none">Änderung übernehmen</button>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                    <hr/>
+                
+                    <div class="crosswordEditor_options">
+                        <select id="selectCrosswordVocabularyLesson">
+                            <option value="-1" >Alle Vokabeln</option>
+                        </select>
+                    </div>
+                
+                    <div class="crosswordEditor_options crosswordVocabularyTable" >
+                        <table id="crosswordVocabularyTable">
+                           
+                        </table>
+                    </div>
+                    <div class="crosswordEditor_options">
+                        <span>Eigenes Wort einfügen</span>
+                        <input type="text" id="inputOwnCrosswordVocabulary"/>
+                    </div>
+                    <div class="crosswordEditor_options">
+                        <div id="btnCrosswordVocabulary_Add"><div class="textIcon"><a>c</a></div> Übernehmen</div>    
+                    </div>
+                    <div class="crosswordEditor_options crosswordVocabularyTable" >
+                        <table id="crosswordOwnVocabularyTable"></table>    
+                    </div>
+                    <div class="crosswordEditor_options">
+                        <div id="btnCrosswordVocabulary_Remove"><a class="crosswordIcon">-</a>Eintrag löschen</div>
+                        <div id="btnCrosswordVocabulary_RemoveAll"><a class="crosswordIcon">x</a>Liste leeren</div>    
+                    </div>
+                    
+                    <hr/>
+                    <div class="crosswordEditor_options">
+                        <div id="btnCrosswordVocabulary_Create"><div class="textIcon"><a>c</a></div> Kreuzworträtsel erstellen</div>
+                    </div>
+                </div>
+                <div id="crosswordEditorView" >
+                    <div id="crossword_panel" class="tools_panel">
+                        <div class="notification_box notification_box_worksheet"></div>
+                        <br/>
+                        <h1 id="crossword_name">Neues Kreuzworträtsel</h1>
+                        <br/>
+                        <h4 id="crossword_desciption">Wählen Sie im linken Bereich die gewünschten Vokablen aus und klicken Sie dann unten auf >Kreuzworträtsel erstellen<</h4>
+                        <hr class="crossword_hr"/>
+                        <div id="crosswordHints" class="crosswordHints">
+                            <div id="crosswordHintsBoxVertical" class="crosswordHintsBoxVertical">
+                                <span class="crosswordHintsHeader">senkrecht</span>
+                                <div id="crosswordHintsVertical" class="crosswordHintsVertical"></div>
+                            </div>
+                            <div id="crosswordHintsBoxHorizontal" class="crosswordHintsBoxHorizontal">
+                                <span class="crosswordHintsHeader crosswordHintsHeaderHorizontal">waagerecht</span>
+                                <div id="crosswordHintsHorizontal" class="crosswordHintsHorizontal"></div>
+                            </div>
+                        </div>
+                        <div contenteditable="false" id="crosswordEditor" style="font-size: 1.0em;">
+                            <table id="crosswordTable" class="crosswordTable">
+                            </table>
+                        </div>
+                        <div id="btnCrossword_ShowContent">
+                            <input id="checkboxCrosswordToggleHide" type="checkbox" checked="checked"/> <div id="lblCrosswordShowContent">Inhalt anzeigen</div>
+                        </div>
+                  
+                    </div>
+              
+                </div>
+                <div id="custom_modal_dialog">
+                    <div id="custom_modal_dialog_content"></div>
+                    <div id="custom_modal_dialog_buttons"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

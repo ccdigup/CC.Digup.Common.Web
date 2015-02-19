@@ -1,0 +1,190 @@
+﻿/*#workSheet_panel {
+    margin: 0 20px;
+}
+#workSheet_panel h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 15px 0 15px 0;
+}
+#workSheet_panel h4{
+    margin: 5px 20px 5px 0;
+    font-size: 16px;
+}
+#show_workSheet_headline span {
+    position: absolute;
+    margin-left: -18px;
+}
+#workSheet_panel hr{
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+*/
+
+#create_own_workSheet_btn:hover, 
+#configure_workSheet_btn:hover,
+#end_configure_workSheet_btn:hover,
+#show_selected_workSheet_material:hover,
+#show_workSheet_headline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#create_own_workSheet_btn:hover .textIcon a {
+    color: #78694c;
+}
+#configure_workSheet_btn:hover .textIcon,
+#end_configure_workSheet_btn:hover .textIcon,
+#show_selected_workSheet_material:hover .textIcon{
+    background-color: #78694c;
+}
+
+#create_own_workSheet_btn_icon {
+    margin-left: 10px;
+}
+
+
+
+#create_own_workSheet_btn_icon {
+    background-color: transparent !important;
+}
+#create_own_workSheet_btn_icon a {
+    color: #0093d2;
+    font-size: 26px;
+}
+#create_own_workSheet_btn_icon a:hover {
+    color: #78694c;
+}
+
+#configure_workSheet_btn_icon {
+    margin-left: 114px;
+}
+
+#restore_workSheetData {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    width: 130px;
+    display: none;
+}
+    #restore_workSheetData p{
+        text-align: right;
+        float: left;
+    }
+    #restore_workSheetData #restore_workSheetData_btn {
+        position: relative;
+        float: right;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        padding: 4px;
+    }
+    #restore_workSheetData #restore_workSheetData_btn.active:hover {
+        background: url(images/timeTable_refresh_icon_inactive.png) no-repeat center transparent;
+        cursor: pointer;
+    }
+    #restore_workSheetData #restore_workSheetData_btn.inactive {
+        background: url(images/timeTable_refresh_icon_inactive.png) no-repeat center transparent;
+    }
+    #restore_workSheetData #restore_workSheetData_btn.active {
+        background: url(images/timeTable_refresh_icon.png) no-repeat center transparent;
+    }
+    #workSheet_panel .loadmask{
+        background-color: #fff;
+        opacity: 0.7;
+    }
+   
+#ownWorkSheets .ownWorkSheet {
+    background: #e0f4fa;
+    width: 233px;
+    margin: 12px 46px 12px 0;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    padding: 7px 20px;
+    text-align: left;
+    float: left;
+}
+#ownWorkSheets .ownWorkSheet a{
+    font-size: 16px;
+}
+#ownWorkSheets .ownWorkSheet:hover{
+    outline: 1px solid #0093d2;
+    cursor: pointer;
+}
+#ownWorkSheets .ownWorkSheet:hover a{
+    color: #0093d2;
+    /*text-decoration: underline;*/
+    /*font-weight: 600;*/
+}
+ 
+ 
+ 
+/*ICONS*/
+#workSheet_content .workSheet_icon {
+    display: none;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+}
+#workSheet_content .workSheet_minus_icon {
+    background: url(images/timeTable_minus_icon.png) no-repeat transparent;
+    margin-left: -17px;
+}
+#workSheet_content .workSheet_plus_icon {
+    background: url(images/timeTable_plus_icon.png) no-repeat transparent;
+    margin-left: 39px;
+}
+#workSheet_content .workSheet_minus_icon:hover{
+    background: url(images/timeTable_minus_icon_hover.png) no-repeat transparent;
+}
+#workSheet_content .workSheet_plus_icon:hover {
+    background: url(images/timeTable_plus_icon_hover.png) no-repeat transparent;
+}
+
+#workSheet_content .educational_reference_table tr.educational_reference_innerContent:hover td {
+    background: url(images/timeTable_edit_icon.png) top right no-repeat #e5f2f8;
+}
+
+#workSheet_content .educational_reference_innerContent:hover .workSheet_icon{
+    display: inherit;
+}
+
+#ownWorkSheets_desc {
+    margin-bottom: 5px;
+}
+
+#ownWorkSheets .ownWorkSheet .workSheet_edit_icon 
+{
+    background: url(images/timeTable_edit_icon_blue.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px 200px;
+    cursor: pointer;
+}
+#ownWorkSheets .ownWorkSheet .workSheet_edit_icon:hover
+{
+    background: url(images/timeTable_edit_icon.png) -3px -3px no-repeat transparent;
+}
+
+#ownWorkSheets .ownWorkSheet .workSheet_plus_icon 
+{
+    background: url(images/timeTable_plus_icon_blue.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px 241px;
+    cursor: pointer;
+}
+#ownWorkSheets .ownWorkSheet .workSheet_plus_icon:hover
+{
+    background: url(images/timeTable_plus_icon.png) no-repeat transparent;
+}
+
+#ownWorkSheets .ownWorkSheet .workSheet_delete_icon 
+{
+    background: url(images/timeTable_delete_icon.png) no-repeat transparent;
+    display: inline;
+    margin: -1px 0 0px -31px;
+    cursor: pointer;
+}
+#ownWorkSheets .ownWorkSheet .workSheet_delete_icon:hover
+{
+    background: url(images/timeTable_minus_icon.png) no-repeat transparent;
+}

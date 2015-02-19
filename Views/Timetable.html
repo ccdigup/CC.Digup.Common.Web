@@ -1,0 +1,110 @@
+﻿<div class="notification_box"></div>
+<div id="timeTable_panel" class="tools_panel">
+    <br/>
+    <h1>Unterrichtsplaner</h1>
+    <br/>
+    <h4 id="timeTable_desciption">Lassen Sie sich den bestehenden Unterrichtsplaner anzeigen<br/>
+        oder erstellen Sie einen eigenen.</h4>
+    <hr/>
+    <div id="restore_timeTableData" style="display: none;">
+        <p>Alle Änderungen<br/>
+            zurücksetzen</p>
+        <div id="restore_timeTableData_btn" class="inactive"></div>
+    </div>
+    <div id="timeTable_content_bag">
+        <style type="text/css">
+            .educational_reference_table {
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+            }
+            .educational_reference_table tr td{
+                border: 1px dotted #cbc4b9;
+                border-bottom: 1px solid #cbc4b9;
+                border-top: 1px solid #cbc4b9;
+                border-left: none;
+            }
+            .educational_reference_form_column, .educational_reference_activity_column, .educational_reference_material_column, .educational_reference_time_column {
+                background-color: #cbc4b9;
+                text-transform: uppercase;
+                color: #fff;
+                padding: 3px 3px 0 3px;
+                text-align: left;
+                min-width: 48px;
+                border: 1px solid #cbc4b9 !important;
+                border-right: 1px solid #fff !important;
+            }
+            .educational_reference_time_column {
+                border-right: 1px solid #cbc4b9 !important;
+            }
+            .educational_reference_table tr td.firstColumn{
+                border-left: 1px dotted #cbc4b9 !important;
+            }
+            .educational_reference_table tr.educational_reference_innerContent td
+            {
+                padding: 5px;
+                font-size: 14px;
+                vertical-align: top;
+                text-align: left;
+                height: 20px;
+            }
+            .educational_reference_table tr.educational_reference_innerContent td.educational_reference_activity_innerColumn
+            {
+                width: 70%;
+            }
+            .educational_reference_table tr.educational_reference_innerContent td.timeTable_form_column
+            {
+                width: 9%;
+            }
+            .educational_reference_table tr.educational_reference_innerContent td.timeTable_material_column
+            {
+                width:14%;
+            }
+            .educational_reference_table tr.educational_reference_innerContent td.timeTable_time_column
+            {
+                width: 7%;
+            }
+
+        </style>
+        <div id="timeTable_content">
+            <h4 id="show_time_table_headline"><span class="ui-icon ui-icon-triangle-1-e"></span>UNTERRICHTSPLANER ANZEIGEN</h4>
+            <div id="show_time_table_headline_options" style="display: none;">
+                <h4>schränken Sie hier die Anzeige über den Lektions- und Übungsfilter ein.</h4>
+                <br />
+                <table id="timeTable_seachbar">
+                    <tr>
+                        <td></td>
+                        <td>von Lektion:</td>
+                        <td><select id="timeTable_select_firstlesson"></select></td>
+                        <td>Übung:</td>
+                        <td><select id="timeTable_select_firstexercise"></select></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="timeTable_select_until" /></td>
+                        <td>bis Lektion:</td>
+                        <td><select id="timeTable_select_lastlesson"></select></td>
+                        <td>Übung:</td>
+                        <td><select id="timeTable_select_lastexercise"></select></td>
+                        <td><span id="show_selected_timeTable_material">ANZEIGEN <div class="textIcon"><a>c</a></div></span></td>
+                    </tr>
+                </table>
+            </div>
+            <hr class="timeTable_inner_hr"/>
+            <div class="tools_panel_content_entry disabled">
+                <h4 id="ownTimeTables_headline">EIGENE UNTERRICHTSPLANER</h4>
+                <div id="ownTimeTables"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="tools_panel_content_entry ">
+                <h4 id="create_own_timeTable_btn">EIGENEN UNTERRICHTSPLANER ERSTELLEN <div class="textIcon"><a>*</a></div></h4>
+            </div>
+            <div class="tools_panel_content_entry disabled">
+                <h4 id="configure_timaTable_btn">LISTE BEARBEITEN <div class="textIcon"><a>©</a></div></h4>
+                <h4 id="end_configure_timaTable_btn" style="display: none;">FERTIG <div class="textIcon"><a>c</a></div></h4>
+            </div>  
+        </div>
+    </div>
+
+</div>
