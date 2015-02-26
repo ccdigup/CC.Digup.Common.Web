@@ -12,7 +12,8 @@ function loadCrosswordView() {
         addCrosswordButtonFunctionalities();
         loadCustomCrosswords();
         if (isOSX()) {
-            $("#exercise .textIcon a").css("margin-top", 1);
+            /* Changed by AR: added line-height */
+            $("#exercise .textIcon a").css({"margin-top": 1, "line-height": "26px"});
         }
     };
     
@@ -304,8 +305,9 @@ function createCrosswordGenerator(data, viewData) {
             loadCrosswordView();
         },
         open: function () {
+                /* Changed by AR: added line-height */
             if (isOSX())
-                $("#crosswordEditorMenu .textIcon a").css("margin-top", 1);
+                $("#crosswordEditorMenu .textIcon a").css({"margin-top": 1, "line-height": "26px"});
 
             $("#crosswordEditor").html('<table id="crosswordTable" class="crosswordTable"></table>');
             $("#crossword_panel .crosswordHints .crosswordHintsBoxHorizontal .crosswordHintsHorizontal").html("");

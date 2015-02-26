@@ -35,6 +35,12 @@
   src: local('ForwardSans-Black'), local('ForwardSans-Black'), url('fonts/ForwardSans/ForwardSans-Black.otf') format('opentype');
 }
 @font-face {
+  font-family: 'ForwardSans-Regular';
+  font-style: normal;
+  font-weight: bold;
+  src: local('ForwardSans-Bold'), local('ForwardSans-Bold'), url('fonts/ForwardSans/ForwardSans-Bold.otf') format('opentype');
+}
+@font-face {
   font-family: 'ForwardSans-Bold';
   font-style: normal;
   font-weight: bold;

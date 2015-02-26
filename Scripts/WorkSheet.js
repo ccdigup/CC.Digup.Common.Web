@@ -12,7 +12,8 @@ function loadWorkSheetView() {
         addWorkSheetButtonFunctionalities();
         loadCustomWorkSheets();
         if (isOSX()) {
-            $("#exercise .textIcon a").css("margin-top", 1);
+        /* Changed by AR: added line-height */
+            $("#exercise .textIcon a").css({"margin-top": 1, "line-height": "26px"});
         }
     };
 
