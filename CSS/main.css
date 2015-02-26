@@ -3,28 +3,28 @@
 
 @font-face {
     font-family: ForwardSans;
-    src: url("../fonts/ForwardSans-Regular.otf");
+    src: url("./fonts/ForwardSans/ForwardSans-Regular.otf");
     font-weight: normal;
     font-style:  normal;
 }
 
 @font-face {
     font-family: ForwardSans;
-    src: url("../fonts/ForwardSans-Italic.otf");
+    src: url("./fonts/ForwardSans/ForwardSans-Italic.otf");
     font-weight: normal;
     font-style:  italic;
 }
 
 @font-face {
     font-family: ForwardSans;
-    src: url("../fonts/ForwardSans-Bold.otf");
+    src: url("./fonts/ForwardSans/ForwardSans-Bold.otf");
     font-weight: bold;
     font-style:  normal;
 }
 
 @font-face {
     font-family: ForwardSans;
-    src: url("../fonts/ForwardSans-BoldItalic.otf");
+    src: url("./fonts/ForwardSans/ForwardSans-BoldItalic.otf");
     font-weight: bold;
     font-style:  italic;
 }

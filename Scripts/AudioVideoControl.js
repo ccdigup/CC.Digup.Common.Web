@@ -171,7 +171,7 @@ interactiveExerciseAudio = {
 
         $('.exercise_audio audio').each(function () {
             this.pause();
-        });
+        }).hide();
     },
     select: function (elem) {
         interactiveExerciseAudio.unselectAll();
@@ -180,6 +180,7 @@ interactiveExerciseAudio = {
         var audio = $('.exercise_audio audio.show[data-name="' + name + '"]')[0];
         var audioWrapper = $(audio).parent();
         $(audioWrapper).show();
+        $(audio).show();
 
         audio.load();
         audio.play();
