@@ -109,6 +109,14 @@ function setAnswersDnD() {
     $("#dnd_container .optionBox").each(function () {
         var currentOptionBox = this;
         var solutionArray = getBoxNumber(this);
+		if(solutionArray.length > 0 && solutionArray[0] == '0'){
+			$(this).each(function () {
+				$(this).removeClass("error").removeClass("correct");
+				$("#dnd_container").append($(this));
+			}).sort(function () {
+				return Math.floor(Math.random() * $("#dnd_container .optionBox").length);
+			}).appendTo($('#dnd_container'));
+		}
         var isSet = false;
         for (var i = 0; i < solutionArray.length; i++) {
             if (!isSet) {
