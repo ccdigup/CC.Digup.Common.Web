@@ -75,7 +75,7 @@ function checkAnswersDnD() {
         $(answerBox).find(".optionBox").each(function (optionIndex, option) {
             if (checkMatch(getBoxNumber(option), answerBox)) {
                 $(option).addClass("correct");
-                $("#set_answer").show();
+                $("#set_answer").hide();
             } else {
                 $(option).addClass("error");
                 $("#set_answer").show();

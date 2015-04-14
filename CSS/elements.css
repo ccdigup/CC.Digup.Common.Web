@@ -106,6 +106,7 @@
 
 .drag-box-richtext__textarea span.answerBox { display: inline-block; }
 .drag-box-richtext__textarea * { -ms-word-wrap: break-word; word-wrap: break-word; }
+.drag-box-richtext__textarea span.text_gap.answerBox { vertical-align: middle; }
 
 .dialog { padding-left: 15px; }
 .dialog.circle:before { content: '\25CF'; position: absolute; left: 0; font-family: ForwardSans-Regular, Tahoma, sans-serif; font-size: 14px; }

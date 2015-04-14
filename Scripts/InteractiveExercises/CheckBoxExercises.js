@@ -25,8 +25,8 @@
 }
 
 function setCheckBoxExerciseAnswers() {
-    $("#set_answer").show();
-    $("#check_answers").show();
+    $("#set_answer").hide();
+    $("#check_answers").hide();
 
     $(".answerBox input[type=checkbox]").each(function (index, elem) {
         $(elem).removeClass("checkbox_error").attr('checked', $(elem).data("answer"));
@@ -41,8 +41,8 @@ function restartCheckBoxExercise() {
             .attr('checked', false);
     });
     
-    $("#set_answer").show();
-    $("#restart").show();
+    $("#set_answer").hide();
+    $("#restart").hide();
     $("#check_answers").show();
 }
 
@@ -65,8 +65,10 @@ function checkCheckBoxAnswer() {
     });
     if(containsErrors) {
         $("#set_answer").show();
+		$("#check_answers").show();
     }else {
-        $("#set_answer").show();
+		$("#check_answers").hide();
+        $("#set_answer").hide();
     }
     $("#restart").show();
 }

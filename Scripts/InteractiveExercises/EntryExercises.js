@@ -22,6 +22,7 @@ function resartEntryAnswerExercise() {
     });
     $("#restart").hide();
     $("#set_answer").hide();
+	$("#check_answers").show();
 }
 
 function setEntryAnswers() {
@@ -34,6 +35,7 @@ function setEntryAnswers() {
     });
 
     $("#set_answer").hide();
+	$("#check_answers").hide();
 }
 
 function checkInputFilling() {
@@ -137,11 +139,11 @@ function checkEntryAnswers() {
 
     if (containsErrors) {
         $("#set_answer").show();
+		$("#check_answers").show();
     } else {
         $("#set_answer").hide();
+		$("#check_answers").hide();
     }
-
-    //$("#check_answers").hide();
     $("#restart").show();
 }
 

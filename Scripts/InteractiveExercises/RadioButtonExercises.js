@@ -1,5 +1,6 @@
 ﻿function setRadioButtonExerciseFunctionalities() {
     $("#check_answers").click(function () {
+		$("#check_answers").hide();
         var startIndex = 1;
         $("#CheckboxExercise input[type=radio]").each(function () {
 
@@ -46,6 +47,7 @@
         });
         $(this).hide();
         $("#set_answer").hide();
+		$("#check_answers").show();
     });
 
     $(".answerInput").change(function () {
@@ -56,7 +58,7 @@
 }
 
 function toggleSetAnswerButton() {
-    var isFilledOutAndWrong = true;
+    var isFilledOutAndWrong = false;
     var startIndex = 1;
     $("#CheckboxExercise input[type=radio]").each(function () {
         $("#CheckboxExercise").find("input[name=question" + startIndex + "]").each(function () {
@@ -72,7 +74,7 @@ function toggleSetAnswerButton() {
     });
     if (isFilledOutAndWrong) {
         $("#restart").show();
-        //$("#check_answers").hide();
+        $("#check_answers").hide();
         $("#set_answer").show();
     }
 }
@@ -101,23 +103,23 @@ function toggleRestartButton() {
 }
 
 function toggleCheckAnswerButton() {
-    var isFilledOut = false;
+    var isFilledOutAndWrong = false;
     var startIndex = 1;
     $("#CheckboxExercise input[type=radio]").each(function () {
         $("#CheckboxExercise").find("input[name=question" + startIndex + "]").each(function () {
-            if ($(this).is(':checked')) {
-                isFilledOut = true;
+            if ($(this).is(':checked') && ($(this).parent().hasClass("correct") || $(this).parent().hasClass("error"))) {
+                isFilledOutAndWrong = true;
                 return false;
             } else {
-                isFilledOut = false;
+                isFilledOutAndWrong = true;
             }
         });
-        if (!isFilledOut) {
+        if (!isFilledOutAndWrong) {
             return false;
         }
         startIndex++;
     });
-    if (isFilledOut) {
+    if (isFilledOutAndWrong) {
         $("#check_answers").show();
     }
 }
