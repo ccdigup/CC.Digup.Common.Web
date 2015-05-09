@@ -49,12 +49,14 @@ function setDnDTextFieldsExerciseFunctionalities() {
 }
 
 function _innercheckAnswers() {
-
+    $("#restart").hide();
+    $("#set_answer").hide();
     if ($("#dnd_container #answerBoxes .optionBox").length > 0) {
         $("#check_answers").show();
+		//$("#set_answer").show();
     } else {
         $("#check_answers").hide();
-        $("#set_answer").hide();
+        //$("#set_answer").hide();
     }
 }
 
@@ -71,17 +73,25 @@ function restartDnD() {
 }
 
 function checkAnswersDnD() {
+    var containsErrors = false;
     $("#dnd_container #answerBoxes .answerBox").each(function (answerBoxIndex, answerBox) {
         $(answerBox).find(".optionBox").each(function (optionIndex, option) {
             if (checkMatch(getBoxNumber(option), answerBox)) {
                 $(option).addClass("correct");
-                $("#set_answer").hide();
+				$(option).removeClass("error");
+                //$("#set_answer").hide();
             } else {
                 $(option).addClass("error");
-                $("#set_answer").show();
+				$(option).removeClass("correct");
+                containsErrors = true;
+                //$("#set_answer").show();
             }
         });
     });
+    if(containsErrors)
+	{
+		$("#set_answer").show();
+	}
     $("#check_answers").hide();
     $("#restart").show();
 }
@@ -172,117 +182,3 @@ function setAnswersDnD() {
     $("#restart").show();
     $("#set_answer").hide();
 }
-
-/*
-var dragElement = null;
-
-function handleDragEnter(e) {
-    this.className = 'over';
-    return false;
-}
-
-function handleDragOver(e) {
-    e.dataTransfer = e.originalEvent.dataTransfer; //set default for jquery
-    if (e.preventDefault) {
-        e.preventDefault();
-    } // allows us to drop
-    this.className = 'over';
-    e.dataTransfer.dropEffect = 'move';
-    
-    return false;
-}
-
-function handleDragStart(e) {
-    $(this).removeClass("correct");
-    $(this).removeClass("error ");
-
-    e.dataTransfer = e.originalEvent.dataTransfer; //set default for jquery
-    $(this).addClass("opacity");
-
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text', $(this).prop('outerHTML'));
-
-    $(this).addClass("moving");
-
-    dragElement = this;
-}
-
-function handleDragEnter(e) {
-    $(".answerBox").removeClass("over");
-    $(this).addClass("over");
-}
-
-function handleDragLeave(e) {
-    $(".answerBox").removeClass("over");
-    $(this).removeClass("over");
-}
-
-function handleDragOver(e) {
-    e.dataTransfer = e.originalEvent.dataTransfer; //set default for jquery
-    if (e.preventDefault) {
-        e.preventDefault(); // Necessary. Allows us to drop.
-    }
-
-    e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
-
-    return false;
-}
-
-function handleDrop(e) { 
-    if (e.stopPropagation) {
-        e.stopPropagation(); // stops the browser from redirecting.
-    }
-
-    e.dataTransfer = e.originalEvent.dataTransfer; //set default for jquery
-
-    $(this).append(e.dataTransfer.getData('text'));
-
-//    if($(this).children().length == 0)
-//        $(this).append(e.dataTransfer.getData('text/html'));
-//    else {
-//        $("#optionBoxes").append(e.dataTransfer.getData('text/html'));
-//    }
-    return false;
-}
-
-function handleDragEnd(e) {
-    e.dataTransfer = e.originalEvent.dataTransfer; //set default for jquery
-    var countAnswerElement = 0;
-    if (e.dataTransfer.dropEffect !== 'none') {
-        $(this).remove();
-        $("#answerBoxes .optionBox").each(function () {
-            $(this).unbind().removeClass("over").removeClass("moving").removeClass("opacity").off()
-            .on("dragstart", handleDragStart, null);
-            $(this).on("dragenter", handleDragEnter, null);
-            $(this).on("dragover", handleDragOver, null);
-            $(this).on("dragleave", handleDragLeave, null);
-            $(this).on("dragend", handleDragEnd, null);
-            countAnswerElement++;
-        });
-
-        $("#dnd_container .optionBox").each(function () {
-            $(this).unbind().removeClass("over").removeClass("moving").removeClass("opacity").off()
-            .on("dragstart", handleDragStart, null);
-            $(this).on("dragenter", handleDragEnter, null);
-            $(this).on("dragover", handleDragOver, null);
-            $(this).on("dragleave", handleDragLeave, null);
-            $(this).on("dragend", handleDragEnd, null);
-        });
-
-    }
-
-    /*var answerBoxLength = $("#dnd_container #answerBoxes .answerBox").length;
-
-    if ($("#dnd_container .optionBox").filter(function () { return !$(this).parent().hasClass('answerBox'); }).length == 0
-        || ($("#dnd_container #answerBoxes .answerBox").length < $("#dnd_container .optionBox[data-boxnumber='" + answerBoxLength + "']").length > 0
-            && $("#dnd_container #answerBoxes .optionBox").length == answerBoxLength)) {#1#
-    if ($("#dnd_container #answerBoxes .optionBox").length > 0) {
-        $("#check_answers").show();
-    } else {
-        $("#check_answers").hide();
-        $("#set_answer").hide();
-    }
-
-    $(".optionBox").css("-webkit-transform", "-webkit-transform: scale(1.0)").removeClass("over").removeClass("opacity").removeClass("moving"); ;
-    $(".answerBox, #dnd_container").removeClass("over").removeClass("opacity").removeClass("moving");
-}*/
